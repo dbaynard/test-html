@@ -9,4 +9,5 @@ abstract: |
     
 ...
 
-[Skylighting](tests/skylighting.html)
+-   [Skylighting](tests/skylighting.html)
+-   [Skylighting (Clay)](tests/skylighting-clay.html)
