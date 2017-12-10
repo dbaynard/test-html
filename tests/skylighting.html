@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
-<html><head><title>src/Skylighting/Format/HTML.hs</title><meta charset="utf-8"><meta name="generator" content="highlight-kate"><style type="text/css">a.sourceLine { display: inline-block; min-height: 1.25em; }
+<html><head><title>src/Skylighting/Format/HTML.hs</title><meta charset="utf-8"><meta name="generator" content="highlight-kate"><style type="text/css">a.sourceLine { display: inline-block; line-height: 1.25; }
 a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; }
 @media print {
@@ -231,30 +232,31 @@ code span.wa { color: #bf0303; } /* Warning */
 <a class="sourceLine" id="172" href="#172" data-line-number="172">              <span class="st">&quot; padding-left: 4px; }&quot;</span></a>
 <a class="sourceLine" id="173" href="#173" data-line-number="173">          ]</a>
 <a class="sourceLine" id="174" href="#174" data-line-number="174">         divspec <span class="fu">=</span> [</a>
-<a class="sourceLine" id="175" href="#175" data-line-number="175">            <span class="st">&quot;a.sourceLine { display: inline-block; min-height: 1.25em; }&quot;</span></a>
+<a class="sourceLine" id="175" href="#175" data-line-number="175">            <span class="st">&quot;a.sourceLine { display: inline-block; line-height: 1.25; }&quot;</span></a>
 <a class="sourceLine" id="176" href="#176" data-line-number="176">          , <span class="st">&quot;a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }&quot;</span></a>
-<a class="sourceLine" id="177" href="#177" data-line-number="177">          , <span class="st">&quot;.sourceCode { overflow: visible; }&quot;</span> <span class="co">-- needed for line numbers</span></a>
-<a class="sourceLine" id="178" href="#178" data-line-number="178">          , <span class="st">&quot;code.sourceCode { white-space: pre; }&quot;</span></a>
-<a class="sourceLine" id="179" href="#179" data-line-number="179">          , <span class="st">&quot;@media print {&quot;</span></a>
-<a class="sourceLine" id="180" href="#180" data-line-number="180">          , <span class="st">&quot;code.sourceCode { white-space: pre-wrap; }&quot;</span></a>
-<a class="sourceLine" id="181" href="#181" data-line-number="181">          , <span class="st">&quot;a.sourceLine { text-indent: -1em; padding-left: 1em; }&quot;</span></a>
-<a class="sourceLine" id="182" href="#182" data-line-number="182">          , <span class="st">&quot;}&quot;</span></a>
-<a class="sourceLine" id="183" href="#183" data-line-number="183">          ]</a>
-<a class="sourceLine" id="184" href="#184" data-line-number="184">         linkspec <span class="fu">=</span> [ <span class="st">&quot;@media screen {&quot;</span></a>
-<a class="sourceLine" id="185" href="#185" data-line-number="185">          , <span class="st">&quot;a.sourceLine::before { text-decoration: underline; color: initial; }&quot;</span></a>
-<a class="sourceLine" id="186" href="#186" data-line-number="186">          , <span class="st">&quot;}&quot;</span></a>
-<a class="sourceLine" id="187" href="#187" data-line-number="187">          ]</a>
-<a class="sourceLine" id="188" href="#188" data-line-number="188"></a>
-<a class="sourceLine" id="189" href="#189" data-line-number="189"><span class="ot">toCss ::</span> (<span class="dt">TokenType</span>, <span class="dt">TokenStyle</span>) <span class="ot">-&gt;</span> <span class="dt">String</span></a>
-<a class="sourceLine" id="190" href="#190" data-line-number="190">toCss (t,tf) <span class="fu">=</span> <span class="st">&quot;code span.&quot;</span> <span class="fu">++</span> short t <span class="fu">++</span> <span class="st">&quot; { &quot;</span></a>
-<a class="sourceLine" id="191" href="#191" data-line-number="191">                <span class="fu">++</span> colorspec <span class="fu">++</span> backgroundspec <span class="fu">++</span> weightspec <span class="fu">++</span> stylespec</a>
-<a class="sourceLine" id="192" href="#192" data-line-number="192">                <span class="fu">++</span> decorationspec <span class="fu">++</span> <span class="st">&quot;} /* &quot;</span> <span class="fu">++</span> showTokenType t <span class="fu">++</span> <span class="st">&quot; */&quot;</span></a>
-<a class="sourceLine" id="193" href="#193" data-line-number="193">  <span class="kw">where</span> colorspec <span class="fu">=</span> maybe <span class="st">&quot;&quot;</span> (\col <span class="ot">-&gt;</span> <span class="st">&quot;color: &quot;</span> <span class="fu">++</span> fromColor col <span class="fu">++</span> <span class="st">&quot;; &quot;</span>) <span class="fu">$</span> tokenColor tf</a>
-<a class="sourceLine" id="194" href="#194" data-line-number="194">        backgroundspec <span class="fu">=</span> maybe <span class="st">&quot;&quot;</span> (\col <span class="ot">-&gt;</span> <span class="st">&quot;background-color: &quot;</span> <span class="fu">++</span> fromColor col <span class="fu">++</span> <span class="st">&quot;; &quot;</span>) <span class="fu">$</span> tokenBackground tf</a>
-<a class="sourceLine" id="195" href="#195" data-line-number="195">        weightspec <span class="fu">=</span> <span class="kw">if</span> tokenBold tf <span class="kw">then</span> <span class="st">&quot;font-weight: bold; &quot;</span> <span class="kw">else</span> <span class="st">&quot;&quot;</span></a>
-<a class="sourceLine" id="196" href="#196" data-line-number="196">        stylespec  <span class="fu">=</span> <span class="kw">if</span> tokenItalic tf <span class="kw">then</span> <span class="st">&quot;font-style: italic; &quot;</span> <span class="kw">else</span> <span class="st">&quot;&quot;</span></a>
-<a class="sourceLine" id="197" href="#197" data-line-number="197">        decorationspec <span class="fu">=</span> <span class="kw">if</span> tokenUnderline tf <span class="kw">then</span> <span class="st">&quot;text-decoration: underline; &quot;</span> <span class="kw">else</span> <span class="st">&quot;&quot;</span></a>
-<a class="sourceLine" id="198" href="#198" data-line-number="198">        showTokenType t&#39; <span class="fu">=</span> <span class="kw">case</span> reverse (show t&#39;) <span class="kw">of</span></a>
-<a class="sourceLine" id="199" href="#199" data-line-number="199">                             <span class="ch">&#39;k&#39;</span><span class="fu">:</span><span class="ch">&#39;o&#39;</span><span class="fu">:</span><span class="ch">&#39;T&#39;</span><span class="fu">:</span>xs <span class="ot">-&gt;</span> reverse xs</a>
-<a class="sourceLine" id="200" href="#200" data-line-number="200">                             _              <span class="ot">-&gt;</span> <span class="st">&quot;&quot;</span></a>
-<a class="sourceLine" id="201" href="#201" data-line-number="201"></a></code></pre></div></body></html>
+<a class="sourceLine" id="177" href="#177" data-line-number="177">          , <span class="st">&quot;a.sourceLine:empty { height: 1em; }&quot;</span></a>
+<a class="sourceLine" id="178" href="#178" data-line-number="178">          , <span class="st">&quot;.sourceCode { overflow: visible; }&quot;</span> <span class="co">-- needed for line numbers</span></a>
+<a class="sourceLine" id="179" href="#179" data-line-number="179">          , <span class="st">&quot;code.sourceCode { white-space: pre; }&quot;</span></a>
+<a class="sourceLine" id="180" href="#180" data-line-number="180">          , <span class="st">&quot;@media print {&quot;</span></a>
+<a class="sourceLine" id="181" href="#181" data-line-number="181">          , <span class="st">&quot;code.sourceCode { white-space: pre-wrap; }&quot;</span></a>
+<a class="sourceLine" id="182" href="#182" data-line-number="182">          , <span class="st">&quot;a.sourceLine { text-indent: -1em; padding-left: 1em; }&quot;</span></a>
+<a class="sourceLine" id="183" href="#183" data-line-number="183">          , <span class="st">&quot;}&quot;</span></a>
+<a class="sourceLine" id="184" href="#184" data-line-number="184">          ]</a>
+<a class="sourceLine" id="185" href="#185" data-line-number="185">         linkspec <span class="fu">=</span> [ <span class="st">&quot;@media screen {&quot;</span></a>
+<a class="sourceLine" id="186" href="#186" data-line-number="186">          , <span class="st">&quot;a.sourceLine::before { text-decoration: underline; color: initial; }&quot;</span></a>
+<a class="sourceLine" id="187" href="#187" data-line-number="187">          , <span class="st">&quot;}&quot;</span></a>
+<a class="sourceLine" id="188" href="#188" data-line-number="188">          ]</a>
+<a class="sourceLine" id="189" href="#189" data-line-number="189"></a>
+<a class="sourceLine" id="190" href="#190" data-line-number="190"><span class="ot">toCss ::</span> (<span class="dt">TokenType</span>, <span class="dt">TokenStyle</span>) <span class="ot">-&gt;</span> <span class="dt">String</span></a>
+<a class="sourceLine" id="191" href="#191" data-line-number="191">toCss (t,tf) <span class="fu">=</span> <span class="st">&quot;code span.&quot;</span> <span class="fu">++</span> short t <span class="fu">++</span> <span class="st">&quot; { &quot;</span></a>
+<a class="sourceLine" id="192" href="#192" data-line-number="192">                <span class="fu">++</span> colorspec <span class="fu">++</span> backgroundspec <span class="fu">++</span> weightspec <span class="fu">++</span> stylespec</a>
+<a class="sourceLine" id="193" href="#193" data-line-number="193">                <span class="fu">++</span> decorationspec <span class="fu">++</span> <span class="st">&quot;} /* &quot;</span> <span class="fu">++</span> showTokenType t <span class="fu">++</span> <span class="st">&quot; */&quot;</span></a>
+<a class="sourceLine" id="194" href="#194" data-line-number="194">  <span class="kw">where</span> colorspec <span class="fu">=</span> maybe <span class="st">&quot;&quot;</span> (\col <span class="ot">-&gt;</span> <span class="st">&quot;color: &quot;</span> <span class="fu">++</span> fromColor col <span class="fu">++</span> <span class="st">&quot;; &quot;</span>) <span class="fu">$</span> tokenColor tf</a>
+<a class="sourceLine" id="195" href="#195" data-line-number="195">        backgroundspec <span class="fu">=</span> maybe <span class="st">&quot;&quot;</span> (\col <span class="ot">-&gt;</span> <span class="st">&quot;background-color: &quot;</span> <span class="fu">++</span> fromColor col <span class="fu">++</span> <span class="st">&quot;; &quot;</span>) <span class="fu">$</span> tokenBackground tf</a>
+<a class="sourceLine" id="196" href="#196" data-line-number="196">        weightspec <span class="fu">=</span> <span class="kw">if</span> tokenBold tf <span class="kw">then</span> <span class="st">&quot;font-weight: bold; &quot;</span> <span class="kw">else</span> <span class="st">&quot;&quot;</span></a>
+<a class="sourceLine" id="197" href="#197" data-line-number="197">        stylespec  <span class="fu">=</span> <span class="kw">if</span> tokenItalic tf <span class="kw">then</span> <span class="st">&quot;font-style: italic; &quot;</span> <span class="kw">else</span> <span class="st">&quot;&quot;</span></a>
+<a class="sourceLine" id="198" href="#198" data-line-number="198">        decorationspec <span class="fu">=</span> <span class="kw">if</span> tokenUnderline tf <span class="kw">then</span> <span class="st">&quot;text-decoration: underline; &quot;</span> <span class="kw">else</span> <span class="st">&quot;&quot;</span></a>
+<a class="sourceLine" id="199" href="#199" data-line-number="199">        showTokenType t&#39; <span class="fu">=</span> <span class="kw">case</span> reverse (show t&#39;) <span class="kw">of</span></a>
+<a class="sourceLine" id="200" href="#200" data-line-number="200">                             <span class="ch">&#39;k&#39;</span><span class="fu">:</span><span class="ch">&#39;o&#39;</span><span class="fu">:</span><span class="ch">&#39;T&#39;</span><span class="fu">:</span>xs <span class="ot">-&gt;</span> reverse xs</a>
+<a class="sourceLine" id="201" href="#201" data-line-number="201">                             _              <span class="ot">-&gt;</span> <span class="st">&quot;&quot;</span></a>
+<a class="sourceLine" id="202" href="#202" data-line-number="202"></a></code></pre></div></body></html>
