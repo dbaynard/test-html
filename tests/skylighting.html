@@ -25,10 +25,10 @@ pre.numberSource a.sourceLine::before
     color: #a0a0a0;
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
-div.sourceCode, pre.sourceCode, code.sourceCode
+div.sourceCode
   { color: #1f1c1b; background-color: #ffffff; }
 @media screen {
-a.sourceLine::before { text-decoration: underline; color: initial; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span. { color: #1f1c1b; } /* Normal */
 code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
@@ -206,7 +206,7 @@ code span.wa { color: #bf0303; } /* Warning */
 <a class="sourceLine" id="143" href="#143" data-line-number="143">  divspec <span class="fu">++</span> numberspec <span class="fu">++</span> colorspec <span class="fu">++</span> linkspec <span class="fu">++</span></a>
 <a class="sourceLine" id="144" href="#144" data-line-number="144">    sort (map toCss (Map.toList (tokenStyles f)))</a>
 <a class="sourceLine" id="145" href="#145" data-line-number="145">   <span class="kw">where</span> colorspec <span class="fu">=</span> [</a>
-<a class="sourceLine" id="146" href="#146" data-line-number="146">           <span class="st">&quot;div.sourceCode, pre.sourceCode, code.sourceCode\n  { &quot;</span></a>
+<a class="sourceLine" id="146" href="#146" data-line-number="146">           <span class="st">&quot;div.sourceCode\n  { &quot;</span></a>
 <a class="sourceLine" id="147" href="#147" data-line-number="147">           <span class="fu">++</span> <span class="kw">case</span> (defaultColor f, backgroundColor f) <span class="kw">of</span></a>
 <a class="sourceLine" id="148" href="#148" data-line-number="148">                (<span class="dt">Nothing</span>, <span class="dt">Nothing</span>) <span class="ot">-&gt;</span> <span class="st">&quot;&quot;</span></a>
 <a class="sourceLine" id="149" href="#149" data-line-number="149">                (<span class="dt">Just</span> c, <span class="dt">Nothing</span>)  <span class="ot">-&gt;</span> <span class="st">&quot;color: &quot;</span> <span class="fu">++</span> fromColor c <span class="fu">++</span> <span class="st">&quot;;&quot;</span></a>
@@ -249,7 +249,7 @@ code span.wa { color: #bf0303; } /* Warning */
 <a class="sourceLine" id="186" href="#186" data-line-number="186">          , <span class="st">&quot;}&quot;</span></a>
 <a class="sourceLine" id="187" href="#187" data-line-number="187">          ]</a>
 <a class="sourceLine" id="188" href="#188" data-line-number="188">         linkspec <span class="fu">=</span> [ <span class="st">&quot;@media screen {&quot;</span></a>
-<a class="sourceLine" id="189" href="#189" data-line-number="189">          , <span class="st">&quot;a.sourceLine::before { text-decoration: underline; color: initial; }&quot;</span></a>
+<a class="sourceLine" id="189" href="#189" data-line-number="189">          , <span class="st">&quot;a.sourceLine::before { text-decoration: underline; }&quot;</span></a>
 <a class="sourceLine" id="190" href="#190" data-line-number="190">          , <span class="st">&quot;}&quot;</span></a>
 <a class="sourceLine" id="191" href="#191" data-line-number="191">          ]</a>
 <a class="sourceLine" id="192" href="#192" data-line-number="192"></a>
