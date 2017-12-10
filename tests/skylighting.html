@@ -1,243 +1,260 @@
-<html><head><title>src/Skylighting/Format/HTML.hs</title><meta charset="utf-8"><meta name="generator" content="highlight-kate"><style type="text/css">div.sourceCode { overflow-x: auto; }
-div.sourceLine, a.sourceLine { display: inline-block; min-height: 2em; }
+<!DOCTYPE HTML>
+<html><head><title>src/Skylighting/Format/HTML.hs</title><meta charset="utf-8"><meta name="generator" content="highlight-kate"><style type="text/css">a.sourceLine { display: inline-block; min-height: 1.25em; }
 a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
 .sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-div.sourceLine, a.sourceLine { text-indent: -1em; padding-left: 1em; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-.numberSource div.sourceLine, .numberSource a.sourceLine
+pre.numberSource a.sourceLine
   { position: relative; }
-.numberSource div.sourceLine::before, .numberSource a.sourceLine::before
+pre.numberSource a.sourceLine::before
   { content: attr(data-line-number);
     position: absolute; left: -5em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; 
+    border: none; pointer-events: all;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em; }
-.numberSource pre.sourceCode { margin-left: 3em;border-left: 1px solid #a0a0a0; background-color: #ffffff; color: #a0a0a0;  padding-left: 4px; }
-pre, code { color: #1f1c1b; background-color: #ffffff; }
+    padding: 0 4px; width: 4em;
+    background-color: #ffffff;
+    color: #a0a0a0;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
+div.sourceCode, pre.sourceCode, code.sourceCode
+  { color: #1f1c1b; background-color: #ffffff; }
 @media screen {
-a.sourceLine::before { text-decoration: underline; color = initial; }
+a.sourceLine::before { text-decoration: underline; color: initial; }
 }
-code > div > span.kw, code > a > span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
-code > div > span.dt, code > a > span.dt { color: #0057ae; } /* DataType */
-code > div > span.dv, code > a > span.dv { color: #b08000; } /* DecVal */
-code > div > span.bn, code > a > span.bn { color: #b08000; } /* BaseN */
-code > div > span.fl, code > a > span.fl { color: #b08000; } /* Float */
-code > div > span.cn, code > a > span.cn { color: #aa5500; } /* Constant */
-code > div > span.ch, code > a > span.ch { color: #924c9d; } /* Char */
-code > div > span.sc, code > a > span.sc { color: #3daee9; } /* SpecialChar */
-code > div > span.st, code > a > span.st { color: #bf0303; } /* String */
-code > div > span.vs, code > a > span.vs { color: #bf0303; } /* VerbatimString */
-code > div > span.ss, code > a > span.ss { color: #ff5500; } /* SpecialString */
-code > div > span.im, code > a > span.im { color: #ff5500; } /* Import */
-code > div > span.co, code > a > span.co { color: #898887; } /* Comment */
-code > div > span.do, code > a > span.do { color: #607880; } /* Documentation */
-code > div > span.an, code > a > span.an { color: #ca60ca; } /* Annotation */
-code > div > span.cv, code > a > span.cv { color: #0095ff; } /* CommentVar */
-code > div > span.ot, code > a > span.ot { color: #006e28; } /* Other */
-code > div > span.fu, code > a > span.fu { color: #644a9b; } /* Function */
-code > div > span.va, code > a > span.va { color: #0057ae; } /* Variable */
-code > div > span.cf, code > a > span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
-code > div > span.op, code > a > span.op { color: #1f1c1b; } /* Operator */
-code > div > span.bu, code > a > span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
-code > div > span.ex, code > a > span.ex { color: #0095ff; font-weight: bold; } /* Extension */
-code > div > span.pp, code > a > span.pp { color: #006e28; } /* Preprocessor */
-code > div > span.at, code > a > span.at { color: #0057ae; } /* Attribute */
-code > div > span.re, code > a > span.re { color: #0057ae; } /* RegionMarker */
-code > div > span.in, code > a > span.in { color: #b08000; } /* Information */
-code > div > span.wa, code > a > span.wa { color: #bf0303; } /* Warning */
-code > div > span.al, code > a > span.al { color: #bf0303; font-weight: bold; } /* Alert */
-code > div > span.er, code > a > span.er { color: #bf0303; text-decoration: underline; } /* Error */
-code > div > span., code > a > span. { color: #1f1c1b; } /* Normal */
-</style></head><body><div class="sourceCode numberSource"><pre class="sourceCode"><code class="sourceCode"><a class="sourceLine" id="1" href="#1" data-line-number="1"><span class="kw">module</span> <span class="dt">Skylighting.Format.HTML</span> (</a>
+code span. { color: #1f1c1b; } /* Normal */
+code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+code span.an { color: #ca60ca; } /* Annotation */
+code span.at { color: #0057ae; } /* Attribute */
+code span.bn { color: #b08000; } /* BaseN */
+code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #924c9d; } /* Char */
+code span.cn { color: #aa5500; } /* Constant */
+code span.co { color: #898887; } /* Comment */
+code span.cv { color: #0095ff; } /* CommentVar */
+code span.do { color: #607880; } /* Documentation */
+code span.dt { color: #0057ae; } /* DataType */
+code span.dv { color: #b08000; } /* DecVal */
+code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #644a9b; } /* Function */
+code span.im { color: #ff5500; } /* Import */
+code span.in { color: #b08000; } /* Information */
+code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code span.op { color: #1f1c1b; } /* Operator */
+code span.ot { color: #006e28; } /* Other */
+code span.pp { color: #006e28; } /* Preprocessor */
+code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #ff5500; } /* SpecialString */
+code span.st { color: #bf0303; } /* String */
+code span.va { color: #0057ae; } /* Variable */
+code span.vs { color: #bf0303; } /* VerbatimString */
+code span.wa { color: #bf0303; } /* Warning */
+</style></head><body><div class="sourceCode"><pre class="sourceCode numberSource"><code class="sourceCode"><a class="sourceLine" id="1" href="#1" data-line-number="1"><span class="kw">module</span> <span class="dt">Skylighting.Format.HTML</span> (</a>
 <a class="sourceLine" id="2" href="#2" data-line-number="2">      formatHtmlInline</a>
 <a class="sourceLine" id="3" href="#3" data-line-number="3">    , formatHtmlBlock</a>
 <a class="sourceLine" id="4" href="#4" data-line-number="4">    , styleToCss</a>
 <a class="sourceLine" id="5" href="#5" data-line-number="5">    ) <span class="kw">where</span></a>
 <a class="sourceLine" id="6" href="#6" data-line-number="6"></a>
-<a class="sourceLine" id="7" href="#7" data-line-number="7"><span class="kw">import </span><span class="dt">Data.List</span> (intersperse)</a>
-<a class="sourceLine" id="8" href="#8" data-line-number="8"><span class="kw">import </span><span class="dt">Data.String</span> (fromString)</a>
-<a class="sourceLine" id="9" href="#9" data-line-number="9"><span class="kw">import qualified</span> <span class="dt">Data.Text</span> <span class="kw">as</span> <span class="dt">Text</span></a>
-<a class="sourceLine" id="10" href="#10" data-line-number="10"><span class="kw">import </span><span class="dt">Skylighting.Types</span></a>
-<a class="sourceLine" id="11" href="#11" data-line-number="11"><span class="kw">import </span><span class="dt">Text.Blaze.Html</span></a>
-<a class="sourceLine" id="12" href="#12" data-line-number="12"><span class="kw">import qualified</span> <span class="dt">Text.Blaze.Html5</span> <span class="kw">as</span> <span class="dt">H</span></a>
-<a class="sourceLine" id="13" href="#13" data-line-number="13"><span class="kw">import qualified</span> <span class="dt">Text.Blaze.Html5.Attributes</span> <span class="kw">as</span> <span class="dt">A</span></a>
-<a class="sourceLine" id="14" href="#14" data-line-number="14"></a>
-<a class="sourceLine" id="15" href="#15" data-line-number="15"><span class="co">-- | Format tokens using HTML spans inside @code@ tags. For example,</span></a>
-<a class="sourceLine" id="16" href="#16" data-line-number="16"><span class="co">-- A @KeywordTok@ is rendered as a span with class @kw@.</span></a>
-<a class="sourceLine" id="17" href="#17" data-line-number="17"><span class="co">-- Short class names correspond to &#39;TokenType&#39;s as follows:</span></a>
-<a class="sourceLine" id="18" href="#18" data-line-number="18"><span class="co">-- &#39;KeywordTok&#39;        = @kw@,</span></a>
-<a class="sourceLine" id="19" href="#19" data-line-number="19"><span class="co">-- &#39;DataTypeTok&#39;       = @dt@,</span></a>
-<a class="sourceLine" id="20" href="#20" data-line-number="20"><span class="co">-- &#39;DecValTok&#39;         = @dv@,</span></a>
-<a class="sourceLine" id="21" href="#21" data-line-number="21"><span class="co">-- &#39;BaseNTok&#39;          = @bn@,</span></a>
-<a class="sourceLine" id="22" href="#22" data-line-number="22"><span class="co">-- &#39;FloatTok&#39;          = @fl@,</span></a>
-<a class="sourceLine" id="23" href="#23" data-line-number="23"><span class="co">-- &#39;CharTok&#39;           = @ch@,</span></a>
-<a class="sourceLine" id="24" href="#24" data-line-number="24"><span class="co">-- &#39;StringTok&#39;         = @st@,</span></a>
-<a class="sourceLine" id="25" href="#25" data-line-number="25"><span class="co">-- &#39;CommentTok&#39;        = @co@,</span></a>
-<a class="sourceLine" id="26" href="#26" data-line-number="26"><span class="co">-- &#39;OtherTok&#39;          = @ot@,</span></a>
-<a class="sourceLine" id="27" href="#27" data-line-number="27"><span class="co">-- &#39;AlertTok&#39;          = @al@,</span></a>
-<a class="sourceLine" id="28" href="#28" data-line-number="28"><span class="co">-- &#39;FunctionTok&#39;       = @fu@,</span></a>
-<a class="sourceLine" id="29" href="#29" data-line-number="29"><span class="co">-- &#39;RegionMarkerTok&#39;   = @re@,</span></a>
-<a class="sourceLine" id="30" href="#30" data-line-number="30"><span class="co">-- &#39;ErrorTok&#39;          = @er@,</span></a>
-<a class="sourceLine" id="31" href="#31" data-line-number="31"><span class="co">-- &#39;ConstantTok&#39;       = @cn@,</span></a>
-<a class="sourceLine" id="32" href="#32" data-line-number="32"><span class="co">-- &#39;SpecialCharTok&#39;    = @sc@,</span></a>
-<a class="sourceLine" id="33" href="#33" data-line-number="33"><span class="co">-- &#39;VerbatimStringTok&#39; = @vs@,</span></a>
-<a class="sourceLine" id="34" href="#34" data-line-number="34"><span class="co">-- &#39;SpecialStringTok&#39;  = @ss@,</span></a>
-<a class="sourceLine" id="35" href="#35" data-line-number="35"><span class="co">-- &#39;ImportTok&#39;         = @im@,</span></a>
-<a class="sourceLine" id="36" href="#36" data-line-number="36"><span class="co">-- &#39;DocumentationTok&#39;  = @do@,</span></a>
-<a class="sourceLine" id="37" href="#37" data-line-number="37"><span class="co">-- &#39;AnnotationTok&#39;     = @an@,</span></a>
-<a class="sourceLine" id="38" href="#38" data-line-number="38"><span class="co">-- &#39;CommentVarTok&#39;     = @cv@,</span></a>
-<a class="sourceLine" id="39" href="#39" data-line-number="39"><span class="co">-- &#39;VariableTok&#39;       = @va@,</span></a>
-<a class="sourceLine" id="40" href="#40" data-line-number="40"><span class="co">-- &#39;ControlFlowTok&#39;    = @cf@,</span></a>
-<a class="sourceLine" id="41" href="#41" data-line-number="41"><span class="co">-- &#39;OperatorTok&#39;       = @op@,</span></a>
-<a class="sourceLine" id="42" href="#42" data-line-number="42"><span class="co">-- &#39;BuiltInTok&#39;        = @bu@,</span></a>
-<a class="sourceLine" id="43" href="#43" data-line-number="43"><span class="co">-- &#39;ExtensionTok&#39;      = @ex@,</span></a>
-<a class="sourceLine" id="44" href="#44" data-line-number="44"><span class="co">-- &#39;PreprocessorTok&#39;   = @pp@,</span></a>
-<a class="sourceLine" id="45" href="#45" data-line-number="45"><span class="co">-- &#39;AttributeTok&#39;      = @at@,</span></a>
-<a class="sourceLine" id="46" href="#46" data-line-number="46"><span class="co">-- &#39;InformationTok&#39;    = @in@,</span></a>
-<a class="sourceLine" id="47" href="#47" data-line-number="47"><span class="co">-- &#39;WarningTok&#39;        = @wa@.</span></a>
-<a class="sourceLine" id="48" href="#48" data-line-number="48"><span class="co">-- A &#39;NormalTok&#39; is not marked up at all.</span></a>
-<a class="sourceLine" id="49" href="#49" data-line-number="49"><span class="ot">formatHtmlInline ::</span> <span class="dt">FormatOptions</span> <span class="ot">-&gt;</span> [<span class="dt">SourceLine</span>] <span class="ot">-&gt;</span> <span class="dt">Html</span></a>
-<a class="sourceLine" id="50" href="#50" data-line-number="50">formatHtmlInline opts <span class="fu">=</span> (H.code <span class="fu">!</span> A.class_ (toValue <span class="fu">$</span> Text.unwords</a>
-<a class="sourceLine" id="51" href="#51" data-line-number="51">                                                    <span class="fu">$</span> Text.pack <span class="st">&quot;sourceCode&quot;</span></a>
-<a class="sourceLine" id="52" href="#52" data-line-number="52">                                                      <span class="fu">:</span> codeClasses opts))</a>
-<a class="sourceLine" id="53" href="#53" data-line-number="53">                                <span class="fu">.</span> mconcat <span class="fu">.</span> intersperse (toHtml <span class="st">&quot;\n&quot;</span>)</a>
-<a class="sourceLine" id="54" href="#54" data-line-number="54">                                <span class="fu">.</span> zipWith (sourceLineToHtml opts) [startNum<span class="fu">..</span>]</a>
-<a class="sourceLine" id="55" href="#55" data-line-number="55">   <span class="kw">where</span> startNum <span class="fu">=</span> <span class="dt">LineNo</span> <span class="fu">$</span> startNumber opts</a>
-<a class="sourceLine" id="56" href="#56" data-line-number="56"></a>
-<a class="sourceLine" id="57" href="#57" data-line-number="57"><span class="ot">tokenToHtml ::</span> <span class="dt">FormatOptions</span> <span class="ot">-&gt;</span> <span class="dt">Token</span> <span class="ot">-&gt;</span> <span class="dt">Html</span></a>
-<a class="sourceLine" id="58" href="#58" data-line-number="58">tokenToHtml _ (<span class="dt">NormalTok</span>, txt)  <span class="fu">=</span> toHtml txt</a>
-<a class="sourceLine" id="59" href="#59" data-line-number="59">tokenToHtml opts (toktype, txt) <span class="fu">=</span></a>
-<a class="sourceLine" id="60" href="#60" data-line-number="60">  <span class="kw">if</span> titleAttributes opts</a>
-<a class="sourceLine" id="61" href="#61" data-line-number="61">     <span class="kw">then</span> sp <span class="fu">!</span> A.title (toValue <span class="fu">$</span> show toktype)</a>
-<a class="sourceLine" id="62" href="#62" data-line-number="62">     <span class="kw">else</span> sp</a>
-<a class="sourceLine" id="63" href="#63" data-line-number="63">   <span class="kw">where</span> sp <span class="fu">=</span> H.span <span class="fu">!</span> A.class_ (toValue <span class="fu">$</span> short toktype) <span class="fu">$</span> toHtml txt</a>
-<a class="sourceLine" id="64" href="#64" data-line-number="64"></a>
-<a class="sourceLine" id="65" href="#65" data-line-number="65"><span class="ot">short ::</span> <span class="dt">TokenType</span> <span class="ot">-&gt;</span> <span class="dt">String</span></a>
-<a class="sourceLine" id="66" href="#66" data-line-number="66">short <span class="dt">KeywordTok</span>        <span class="fu">=</span> <span class="st">&quot;kw&quot;</span></a>
-<a class="sourceLine" id="67" href="#67" data-line-number="67">short <span class="dt">DataTypeTok</span>       <span class="fu">=</span> <span class="st">&quot;dt&quot;</span></a>
-<a class="sourceLine" id="68" href="#68" data-line-number="68">short <span class="dt">DecValTok</span>         <span class="fu">=</span> <span class="st">&quot;dv&quot;</span></a>
-<a class="sourceLine" id="69" href="#69" data-line-number="69">short <span class="dt">BaseNTok</span>          <span class="fu">=</span> <span class="st">&quot;bn&quot;</span></a>
-<a class="sourceLine" id="70" href="#70" data-line-number="70">short <span class="dt">FloatTok</span>          <span class="fu">=</span> <span class="st">&quot;fl&quot;</span></a>
-<a class="sourceLine" id="71" href="#71" data-line-number="71">short <span class="dt">CharTok</span>           <span class="fu">=</span> <span class="st">&quot;ch&quot;</span></a>
-<a class="sourceLine" id="72" href="#72" data-line-number="72">short <span class="dt">StringTok</span>         <span class="fu">=</span> <span class="st">&quot;st&quot;</span></a>
-<a class="sourceLine" id="73" href="#73" data-line-number="73">short <span class="dt">CommentTok</span>        <span class="fu">=</span> <span class="st">&quot;co&quot;</span></a>
-<a class="sourceLine" id="74" href="#74" data-line-number="74">short <span class="dt">OtherTok</span>          <span class="fu">=</span> <span class="st">&quot;ot&quot;</span></a>
-<a class="sourceLine" id="75" href="#75" data-line-number="75">short <span class="dt">AlertTok</span>          <span class="fu">=</span> <span class="st">&quot;al&quot;</span></a>
-<a class="sourceLine" id="76" href="#76" data-line-number="76">short <span class="dt">FunctionTok</span>       <span class="fu">=</span> <span class="st">&quot;fu&quot;</span></a>
-<a class="sourceLine" id="77" href="#77" data-line-number="77">short <span class="dt">RegionMarkerTok</span>   <span class="fu">=</span> <span class="st">&quot;re&quot;</span></a>
-<a class="sourceLine" id="78" href="#78" data-line-number="78">short <span class="dt">ErrorTok</span>          <span class="fu">=</span> <span class="st">&quot;er&quot;</span></a>
-<a class="sourceLine" id="79" href="#79" data-line-number="79">short <span class="dt">ConstantTok</span>       <span class="fu">=</span> <span class="st">&quot;cn&quot;</span></a>
-<a class="sourceLine" id="80" href="#80" data-line-number="80">short <span class="dt">SpecialCharTok</span>    <span class="fu">=</span> <span class="st">&quot;sc&quot;</span></a>
-<a class="sourceLine" id="81" href="#81" data-line-number="81">short <span class="dt">VerbatimStringTok</span> <span class="fu">=</span> <span class="st">&quot;vs&quot;</span></a>
-<a class="sourceLine" id="82" href="#82" data-line-number="82">short <span class="dt">SpecialStringTok</span>  <span class="fu">=</span> <span class="st">&quot;ss&quot;</span></a>
-<a class="sourceLine" id="83" href="#83" data-line-number="83">short <span class="dt">ImportTok</span>         <span class="fu">=</span> <span class="st">&quot;im&quot;</span></a>
-<a class="sourceLine" id="84" href="#84" data-line-number="84">short <span class="dt">DocumentationTok</span>  <span class="fu">=</span> <span class="st">&quot;do&quot;</span></a>
-<a class="sourceLine" id="85" href="#85" data-line-number="85">short <span class="dt">AnnotationTok</span>     <span class="fu">=</span> <span class="st">&quot;an&quot;</span></a>
-<a class="sourceLine" id="86" href="#86" data-line-number="86">short <span class="dt">CommentVarTok</span>     <span class="fu">=</span> <span class="st">&quot;cv&quot;</span></a>
-<a class="sourceLine" id="87" href="#87" data-line-number="87">short <span class="dt">VariableTok</span>       <span class="fu">=</span> <span class="st">&quot;va&quot;</span></a>
-<a class="sourceLine" id="88" href="#88" data-line-number="88">short <span class="dt">ControlFlowTok</span>    <span class="fu">=</span> <span class="st">&quot;cf&quot;</span></a>
-<a class="sourceLine" id="89" href="#89" data-line-number="89">short <span class="dt">OperatorTok</span>       <span class="fu">=</span> <span class="st">&quot;op&quot;</span></a>
-<a class="sourceLine" id="90" href="#90" data-line-number="90">short <span class="dt">BuiltInTok</span>        <span class="fu">=</span> <span class="st">&quot;bu&quot;</span></a>
-<a class="sourceLine" id="91" href="#91" data-line-number="91">short <span class="dt">ExtensionTok</span>      <span class="fu">=</span> <span class="st">&quot;ex&quot;</span></a>
-<a class="sourceLine" id="92" href="#92" data-line-number="92">short <span class="dt">PreprocessorTok</span>   <span class="fu">=</span> <span class="st">&quot;pp&quot;</span></a>
-<a class="sourceLine" id="93" href="#93" data-line-number="93">short <span class="dt">AttributeTok</span>      <span class="fu">=</span> <span class="st">&quot;at&quot;</span></a>
-<a class="sourceLine" id="94" href="#94" data-line-number="94">short <span class="dt">InformationTok</span>    <span class="fu">=</span> <span class="st">&quot;in&quot;</span></a>
-<a class="sourceLine" id="95" href="#95" data-line-number="95">short <span class="dt">WarningTok</span>        <span class="fu">=</span> <span class="st">&quot;wa&quot;</span></a>
-<a class="sourceLine" id="96" href="#96" data-line-number="96">short <span class="dt">NormalTok</span>         <span class="fu">=</span> <span class="st">&quot;&quot;</span></a>
-<a class="sourceLine" id="97" href="#97" data-line-number="97"></a>
-<a class="sourceLine" id="98" href="#98" data-line-number="98"><span class="co">-- | Each line of source is wrapped in an (inline-block) div that makes</span></a>
-<a class="sourceLine" id="99" href="#99" data-line-number="99"><span class="co">-- subsequent per-line processing (e.g. adding line numnbers) possible.</span></a>
-<a class="sourceLine" id="100" href="#100" data-line-number="100"><span class="ot">sourceLineToHtml ::</span> <span class="dt">FormatOptions</span> <span class="ot">-&gt;</span> <span class="dt">LineNo</span> <span class="ot">-&gt;</span> <span class="dt">SourceLine</span> <span class="ot">-&gt;</span> <span class="dt">Html</span></a>
-<a class="sourceLine" id="101" href="#101" data-line-number="101">sourceLineToHtml opts lno cont <span class="fu">=</span> wrapElement <span class="fu">!</span> A.class_ sourceLine</a>
-<a class="sourceLine" id="102" href="#102" data-line-number="102">                                       <span class="fu">!</span> A.id lineNum</a>
-<a class="sourceLine" id="103" href="#103" data-line-number="103">                                       <span class="fu">!</span> A.href lineRef</a>
-<a class="sourceLine" id="104" href="#104" data-line-number="104">                                       <span class="fu">!</span> H.dataAttribute (fromString <span class="st">&quot;line-number&quot;</span>) lineNum <span class="fu">$</span></a>
-<a class="sourceLine" id="105" href="#105" data-line-number="105">                                mapM_ (tokenToHtml opts) cont</a>
-<a class="sourceLine" id="106" href="#106" data-line-number="106">  <span class="kw">where</span>  sourceLine <span class="fu">=</span> toValue <span class="st">&quot;sourceLine&quot;</span></a>
-<a class="sourceLine" id="107" href="#107" data-line-number="107">         lineNum <span class="fu">=</span> toValue <span class="fu">.</span> show <span class="fu">.</span> lineNo <span class="fu">$</span> lno</a>
-<a class="sourceLine" id="108" href="#108" data-line-number="108">         lineRef <span class="fu">=</span> toValue <span class="fu">.</span> (<span class="ch">&#39;#&#39;</span><span class="fu">:</span>) <span class="fu">.</span> show <span class="fu">.</span> lineNo <span class="fu">$</span> lno</a>
-<a class="sourceLine" id="109" href="#109" data-line-number="109">         wrapElement <span class="fu">=</span> <span class="kw">if</span> lineAnchors opts</a>
-<a class="sourceLine" id="110" href="#110" data-line-number="110">                <span class="kw">then</span> H.a</a>
-<a class="sourceLine" id="111" href="#111" data-line-number="111">                <span class="kw">else</span> H.div</a>
-<a class="sourceLine" id="112" href="#112" data-line-number="112"></a>
-<a class="sourceLine" id="113" href="#113" data-line-number="113"><span class="ot">formatHtmlBlockPre ::</span> <span class="dt">FormatOptions</span> <span class="ot">-&gt;</span> [<span class="dt">SourceLine</span>] <span class="ot">-&gt;</span> <span class="dt">Html</span></a>
-<a class="sourceLine" id="114" href="#114" data-line-number="114">formatHtmlBlockPre opts <span class="fu">=</span> H.pre <span class="fu">.</span> formatHtmlInline opts</a>
-<a class="sourceLine" id="115" href="#115" data-line-number="115"></a>
-<a class="sourceLine" id="116" href="#116" data-line-number="116"><span class="co">-- | Format tokens as an HTML @pre@ block. Each line is wrapped in a div</span></a>
-<a class="sourceLine" id="117" href="#117" data-line-number="117"><span class="co">-- with the class ‘source-line’. The whole code block is wrapped in a @div@</span></a>
-<a class="sourceLine" id="118" href="#118" data-line-number="118"><span class="co">-- element to aid styling (e.g. the overflow-x property). If line numbering</span></a>
-<a class="sourceLine" id="119" href="#119" data-line-number="119"><span class="co">-- is selected, this surrounding div is given the class ‘number-source’,</span></a>
-<a class="sourceLine" id="120" href="#120" data-line-number="120"><span class="co">-- and the resulting html will display line numbers thanks to the included</span></a>
-<a class="sourceLine" id="121" href="#121" data-line-number="121"><span class="co">-- css. Note that the html produced will always include the line numbers as</span></a>
-<a class="sourceLine" id="122" href="#122" data-line-number="122"><span class="co">-- the &#39;data-line-number&#39; attribute.</span></a>
-<a class="sourceLine" id="123" href="#123" data-line-number="123"><span class="co">-- See the documentation for &#39;formatHtmlInline&#39; for information about how</span></a>
-<a class="sourceLine" id="124" href="#124" data-line-number="124"><span class="co">-- tokens are encoded.</span></a>
-<a class="sourceLine" id="125" href="#125" data-line-number="125"><span class="ot">formatHtmlBlock ::</span> <span class="dt">FormatOptions</span> <span class="ot">-&gt;</span> [<span class="dt">SourceLine</span>] <span class="ot">-&gt;</span> <span class="dt">Html</span></a>
-<a class="sourceLine" id="126" href="#126" data-line-number="126">formatHtmlBlock opts ls <span class="fu">=</span> H.div <span class="fu">!</span> A.class_ sourceCode <span class="fu">$</span></a>
-<a class="sourceLine" id="127" href="#127" data-line-number="127">                            pre <span class="fu">!</span> A.class_ (toValue <span class="fu">$</span> Text.unwords classes)</a>
-<a class="sourceLine" id="128" href="#128" data-line-number="128">  <span class="kw">where</span>  sourceCode <span class="fu">=</span> toValue <span class="fu">.</span> Text.unwords <span class="fu">$</span> Text.pack <span class="st">&quot;sourceCode&quot;</span> <span class="fu">:</span></a>
-<a class="sourceLine" id="129" href="#129" data-line-number="129">                      <span class="kw">if</span> numberLines opts</a>
-<a class="sourceLine" id="130" href="#130" data-line-number="130">                        <span class="kw">then</span> [Text.pack <span class="st">&quot;numberSource&quot;</span>]</a>
-<a class="sourceLine" id="131" href="#131" data-line-number="131">                        <span class="kw">else</span> []</a>
-<a class="sourceLine" id="132" href="#132" data-line-number="132">         classes <span class="fu">=</span> Text.pack <span class="st">&quot;sourceCode&quot;</span> <span class="fu">:</span></a>
-<a class="sourceLine" id="133" href="#133" data-line-number="133">                   [x <span class="fu">|</span> x <span class="ot">&lt;-</span> containerClasses opts, x <span class="fu">/=</span> Text.pack <span class="st">&quot;sourceCode&quot;</span>]</a>
-<a class="sourceLine" id="134" href="#134" data-line-number="134">         pre <span class="fu">=</span> formatHtmlBlockPre opts ls</a>
-<a class="sourceLine" id="135" href="#135" data-line-number="135"></a>
-<a class="sourceLine" id="136" href="#136" data-line-number="136"><span class="co">-- | Returns CSS for styling highlighted code according to the given style.</span></a>
-<a class="sourceLine" id="137" href="#137" data-line-number="137"><span class="ot">styleToCss ::</span> <span class="dt">Style</span> <span class="ot">-&gt;</span> <span class="dt">String</span></a>
-<a class="sourceLine" id="138" href="#138" data-line-number="138">styleToCss f <span class="fu">=</span> unlines <span class="fu">$</span> divspec <span class="fu">++</span> numberspec <span class="fu">++</span> colorspec <span class="fu">++</span> linkspec <span class="fu">++</span> map toCss (tokenStyles f)</a>
-<a class="sourceLine" id="139" href="#139" data-line-number="139">   <span class="kw">where</span> colorspec <span class="fu">=</span> <span class="kw">case</span> (defaultColor f, backgroundColor f) <span class="kw">of</span></a>
-<a class="sourceLine" id="140" href="#140" data-line-number="140">                          (<span class="dt">Nothing</span>, <span class="dt">Nothing</span>) <span class="ot">-&gt;</span> []</a>
-<a class="sourceLine" id="141" href="#141" data-line-number="141">                          (<span class="dt">Just</span> c, <span class="dt">Nothing</span>)  <span class="ot">-&gt;</span> [<span class="st">&quot;pre, code { color: &quot;</span> <span class="fu">++</span> fromColor c <span class="fu">++</span> <span class="st">&quot;; }&quot;</span>]</a>
-<a class="sourceLine" id="142" href="#142" data-line-number="142">                          (<span class="dt">Nothing</span>, <span class="dt">Just</span> c)  <span class="ot">-&gt;</span> [<span class="st">&quot;pre, code { background-color: &quot;</span> <span class="fu">++</span> fromColor c <span class="fu">++</span> <span class="st">&quot;; }&quot;</span>]</a>
-<a class="sourceLine" id="143" href="#143" data-line-number="143">                          (<span class="dt">Just</span> c1, <span class="dt">Just</span> c2) <span class="ot">-&gt;</span> [<span class="st">&quot;pre, code { color: &quot;</span> <span class="fu">++</span> fromColor c1 <span class="fu">++</span> <span class="st">&quot;; background-color: &quot;</span> <span class="fu">++</span></a>
-<a class="sourceLine" id="144" href="#144" data-line-number="144">                                                  fromColor c2 <span class="fu">++</span> <span class="st">&quot;; }&quot;</span>]</a>
-<a class="sourceLine" id="145" href="#145" data-line-number="145">         numberspec <span class="fu">=</span> [</a>
-<a class="sourceLine" id="146" href="#146" data-line-number="146">            <span class="st">&quot;.numberSource div.sourceLine, .numberSource a.sourceLine&quot;</span></a>
-<a class="sourceLine" id="147" href="#147" data-line-number="147">          , <span class="st">&quot;  { position: relative; }&quot;</span></a>
-<a class="sourceLine" id="148" href="#148" data-line-number="148">          , <span class="st">&quot;.numberSource div.sourceLine::before, .numberSource a.sourceLine::before&quot;</span></a>
-<a class="sourceLine" id="149" href="#149" data-line-number="149">          , <span class="st">&quot;  { content: attr(data-line-number);&quot;</span></a>
-<a class="sourceLine" id="150" href="#150" data-line-number="150">          , <span class="st">&quot;    position: absolute; left: -5em; text-align: right; vertical-align: baseline;&quot;</span></a>
-<a class="sourceLine" id="151" href="#151" data-line-number="151">          , <span class="st">&quot;    border: none; pointer-events: all; &quot;</span></a>
-<a class="sourceLine" id="152" href="#152" data-line-number="152">          , <span class="st">&quot;    -webkit-touch-callout: none; -webkit-user-select: none;&quot;</span></a>
-<a class="sourceLine" id="153" href="#153" data-line-number="153">          , <span class="st">&quot;    -khtml-user-select: none; -moz-user-select: none;&quot;</span></a>
-<a class="sourceLine" id="154" href="#154" data-line-number="154">          , <span class="st">&quot;    -ms-user-select: none; user-select: none;&quot;</span></a>
-<a class="sourceLine" id="155" href="#155" data-line-number="155">          , <span class="st">&quot;    padding: 0 4px; width: 4em; }&quot;</span></a>
-<a class="sourceLine" id="156" href="#156" data-line-number="156">          , <span class="st">&quot;.numberSource pre.sourceCode { margin-left: 3em;&quot;</span> <span class="fu">++</span></a>
-<a class="sourceLine" id="157" href="#157" data-line-number="157">              maybe <span class="st">&quot;&quot;</span> (\c <span class="ot">-&gt;</span> <span class="st">&quot;border-left: 1px solid &quot;</span> <span class="fu">++</span> fromColor c <span class="fu">++</span> <span class="st">&quot;; &quot;</span>) (lineNumberColor f) <span class="fu">++</span></a>
-<a class="sourceLine" id="158" href="#158" data-line-number="158">              maybe <span class="st">&quot;&quot;</span> (\c <span class="ot">-&gt;</span> <span class="st">&quot;background-color: &quot;</span> <span class="fu">++</span> fromColor c <span class="fu">++</span> <span class="st">&quot;; &quot;</span>) (lineNumberBackgroundColor f) <span class="fu">++</span></a>
-<a class="sourceLine" id="159" href="#159" data-line-number="159">              maybe <span class="st">&quot;&quot;</span> (\c <span class="ot">-&gt;</span> <span class="st">&quot;color: &quot;</span> <span class="fu">++</span> fromColor c <span class="fu">++</span> <span class="st">&quot;; &quot;</span>) (lineNumberColor f) <span class="fu">++</span></a>
-<a class="sourceLine" id="160" href="#160" data-line-number="160">              <span class="st">&quot; padding-left: 4px; }&quot;</span></a>
-<a class="sourceLine" id="161" href="#161" data-line-number="161">          ]</a>
-<a class="sourceLine" id="162" href="#162" data-line-number="162">         divspec <span class="fu">=</span> [ <span class="st">&quot;div.sourceCode { overflow-x: auto; }&quot;</span></a>
-<a class="sourceLine" id="163" href="#163" data-line-number="163">          , <span class="st">&quot;div.sourceLine, a.sourceLine { display: inline-block; min-height: 2em; }&quot;</span></a>
-<a class="sourceLine" id="164" href="#164" data-line-number="164">          , <span class="st">&quot;a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }&quot;</span></a>
-<a class="sourceLine" id="165" href="#165" data-line-number="165">          , <span class="st">&quot;.sourceCode { overflow: visible; }&quot;</span></a>
-<a class="sourceLine" id="166" href="#166" data-line-number="166">          , <span class="st">&quot;@media print {&quot;</span></a>
-<a class="sourceLine" id="167" href="#167" data-line-number="167">          , <span class="st">&quot;code.sourceCode { white-space: pre-wrap; }&quot;</span></a>
-<a class="sourceLine" id="168" href="#168" data-line-number="168">          , <span class="st">&quot;div.sourceLine, a.sourceLine { text-indent: -1em; padding-left: 1em; }&quot;</span></a>
-<a class="sourceLine" id="169" href="#169" data-line-number="169">          , <span class="st">&quot;}&quot;</span></a>
-<a class="sourceLine" id="170" href="#170" data-line-number="170">          ]</a>
-<a class="sourceLine" id="171" href="#171" data-line-number="171">         linkspec <span class="fu">=</span> [ <span class="st">&quot;@media screen {&quot;</span></a>
-<a class="sourceLine" id="172" href="#172" data-line-number="172">          , <span class="st">&quot;a.sourceLine::before { text-decoration: underline; color = initial; }&quot;</span></a>
-<a class="sourceLine" id="173" href="#173" data-line-number="173">          , <span class="st">&quot;}&quot;</span></a>
-<a class="sourceLine" id="174" href="#174" data-line-number="174">          ]</a>
-<a class="sourceLine" id="175" href="#175" data-line-number="175"></a>
-<a class="sourceLine" id="176" href="#176" data-line-number="176"><span class="ot">toCss ::</span> (<span class="dt">TokenType</span>, <span class="dt">TokenStyle</span>) <span class="ot">-&gt;</span> <span class="dt">String</span></a>
-<a class="sourceLine" id="177" href="#177" data-line-number="177">toCss (t,tf) <span class="fu">=</span> <span class="st">&quot;code &gt; div &gt; span.&quot;</span> <span class="fu">++</span> short t <span class="fu">++</span> <span class="st">&quot;, &quot;</span></a>
-<a class="sourceLine" id="178" href="#178" data-line-number="178">                <span class="fu">++</span> <span class="st">&quot;code &gt; a &gt; span.&quot;</span> <span class="fu">++</span> short t <span class="fu">++</span> <span class="st">&quot; { &quot;</span></a>
-<a class="sourceLine" id="179" href="#179" data-line-number="179">                <span class="fu">++</span> colorspec <span class="fu">++</span> backgroundspec <span class="fu">++</span> weightspec <span class="fu">++</span> stylespec</a>
-<a class="sourceLine" id="180" href="#180" data-line-number="180">                <span class="fu">++</span> decorationspec <span class="fu">++</span> <span class="st">&quot;} /* &quot;</span> <span class="fu">++</span> showTokenType t <span class="fu">++</span> <span class="st">&quot; */&quot;</span></a>
-<a class="sourceLine" id="181" href="#181" data-line-number="181">  <span class="kw">where</span> colorspec <span class="fu">=</span> maybe <span class="st">&quot;&quot;</span> (\col <span class="ot">-&gt;</span> <span class="st">&quot;color: &quot;</span> <span class="fu">++</span> fromColor col <span class="fu">++</span> <span class="st">&quot;; &quot;</span>) <span class="fu">$</span> tokenColor tf</a>
-<a class="sourceLine" id="182" href="#182" data-line-number="182">        backgroundspec <span class="fu">=</span> maybe <span class="st">&quot;&quot;</span> (\col <span class="ot">-&gt;</span> <span class="st">&quot;background-color: &quot;</span> <span class="fu">++</span> fromColor col <span class="fu">++</span> <span class="st">&quot;; &quot;</span>) <span class="fu">$</span> tokenBackground tf</a>
-<a class="sourceLine" id="183" href="#183" data-line-number="183">        weightspec <span class="fu">=</span> <span class="kw">if</span> tokenBold tf <span class="kw">then</span> <span class="st">&quot;font-weight: bold; &quot;</span> <span class="kw">else</span> <span class="st">&quot;&quot;</span></a>
-<a class="sourceLine" id="184" href="#184" data-line-number="184">        stylespec  <span class="fu">=</span> <span class="kw">if</span> tokenItalic tf <span class="kw">then</span> <span class="st">&quot;font-style: italic; &quot;</span> <span class="kw">else</span> <span class="st">&quot;&quot;</span></a>
-<a class="sourceLine" id="185" href="#185" data-line-number="185">        decorationspec <span class="fu">=</span> <span class="kw">if</span> tokenUnderline tf <span class="kw">then</span> <span class="st">&quot;text-decoration: underline; &quot;</span> <span class="kw">else</span> <span class="st">&quot;&quot;</span></a>
-<a class="sourceLine" id="186" href="#186" data-line-number="186">        showTokenType t&#39; <span class="fu">=</span> <span class="kw">case</span> reverse (show t&#39;) <span class="kw">of</span></a>
-<a class="sourceLine" id="187" href="#187" data-line-number="187">                             <span class="ch">&#39;k&#39;</span><span class="fu">:</span><span class="ch">&#39;o&#39;</span><span class="fu">:</span><span class="ch">&#39;T&#39;</span><span class="fu">:</span>xs <span class="ot">-&gt;</span> reverse xs</a>
-<a class="sourceLine" id="188" href="#188" data-line-number="188">                             _              <span class="ot">-&gt;</span> <span class="st">&quot;&quot;</span></a>
-<a class="sourceLine" id="189" href="#189" data-line-number="189"></a></code></pre></div></body></html>
+<a class="sourceLine" id="7" href="#7" data-line-number="7"><span class="kw">import</span> <span class="dt">Data.List</span> (intersperse, sort)</a>
+<a class="sourceLine" id="8" href="#8" data-line-number="8"><span class="kw">import</span> <span class="kw">qualified</span> <span class="dt">Data.Map</span> <span class="kw">as</span> <span class="dt">Map</span></a>
+<a class="sourceLine" id="9" href="#9" data-line-number="9"><span class="kw">import</span> <span class="dt">Data.Monoid</span> ((&lt;&gt;))</a>
+<a class="sourceLine" id="10" href="#10" data-line-number="10"><span class="kw">import</span> <span class="dt">Data.String</span> (fromString)</a>
+<a class="sourceLine" id="11" href="#11" data-line-number="11"><span class="kw">import</span> <span class="kw">qualified</span> <span class="dt">Data.Text</span> <span class="kw">as</span> <span class="dt">Text</span></a>
+<a class="sourceLine" id="12" href="#12" data-line-number="12"><span class="kw">import</span> <span class="dt">Skylighting.Types</span></a>
+<a class="sourceLine" id="13" href="#13" data-line-number="13"><span class="kw">import</span> <span class="dt">Text.Blaze.Html</span></a>
+<a class="sourceLine" id="14" href="#14" data-line-number="14"><span class="kw">import</span> <span class="kw">qualified</span> <span class="dt">Text.Blaze.Html5</span> <span class="kw">as</span> <span class="dt">H</span></a>
+<a class="sourceLine" id="15" href="#15" data-line-number="15"><span class="kw">import</span> <span class="kw">qualified</span> <span class="dt">Text.Blaze.Html5.Attributes</span> <span class="kw">as</span> <span class="dt">A</span></a>
+<a class="sourceLine" id="16" href="#16" data-line-number="16"></a>
+<a class="sourceLine" id="17" href="#17" data-line-number="17"><span class="co">-- | Format tokens using HTML spans inside @code@ tags. For example,</span></a>
+<a class="sourceLine" id="18" href="#18" data-line-number="18"><span class="co">-- A @KeywordTok@ is rendered as a span with class @kw@.</span></a>
+<a class="sourceLine" id="19" href="#19" data-line-number="19"><span class="co">-- Short class names correspond to &#39;TokenType&#39;s as follows:</span></a>
+<a class="sourceLine" id="20" href="#20" data-line-number="20"><span class="co">-- &#39;KeywordTok&#39;        = @kw@,</span></a>
+<a class="sourceLine" id="21" href="#21" data-line-number="21"><span class="co">-- &#39;DataTypeTok&#39;       = @dt@,</span></a>
+<a class="sourceLine" id="22" href="#22" data-line-number="22"><span class="co">-- &#39;DecValTok&#39;         = @dv@,</span></a>
+<a class="sourceLine" id="23" href="#23" data-line-number="23"><span class="co">-- &#39;BaseNTok&#39;          = @bn@,</span></a>
+<a class="sourceLine" id="24" href="#24" data-line-number="24"><span class="co">-- &#39;FloatTok&#39;          = @fl@,</span></a>
+<a class="sourceLine" id="25" href="#25" data-line-number="25"><span class="co">-- &#39;CharTok&#39;           = @ch@,</span></a>
+<a class="sourceLine" id="26" href="#26" data-line-number="26"><span class="co">-- &#39;StringTok&#39;         = @st@,</span></a>
+<a class="sourceLine" id="27" href="#27" data-line-number="27"><span class="co">-- &#39;CommentTok&#39;        = @co@,</span></a>
+<a class="sourceLine" id="28" href="#28" data-line-number="28"><span class="co">-- &#39;OtherTok&#39;          = @ot@,</span></a>
+<a class="sourceLine" id="29" href="#29" data-line-number="29"><span class="co">-- &#39;AlertTok&#39;          = @al@,</span></a>
+<a class="sourceLine" id="30" href="#30" data-line-number="30"><span class="co">-- &#39;FunctionTok&#39;       = @fu@,</span></a>
+<a class="sourceLine" id="31" href="#31" data-line-number="31"><span class="co">-- &#39;RegionMarkerTok&#39;   = @re@,</span></a>
+<a class="sourceLine" id="32" href="#32" data-line-number="32"><span class="co">-- &#39;ErrorTok&#39;          = @er@,</span></a>
+<a class="sourceLine" id="33" href="#33" data-line-number="33"><span class="co">-- &#39;ConstantTok&#39;       = @cn@,</span></a>
+<a class="sourceLine" id="34" href="#34" data-line-number="34"><span class="co">-- &#39;SpecialCharTok&#39;    = @sc@,</span></a>
+<a class="sourceLine" id="35" href="#35" data-line-number="35"><span class="co">-- &#39;VerbatimStringTok&#39; = @vs@,</span></a>
+<a class="sourceLine" id="36" href="#36" data-line-number="36"><span class="co">-- &#39;SpecialStringTok&#39;  = @ss@,</span></a>
+<a class="sourceLine" id="37" href="#37" data-line-number="37"><span class="co">-- &#39;ImportTok&#39;         = @im@,</span></a>
+<a class="sourceLine" id="38" href="#38" data-line-number="38"><span class="co">-- &#39;DocumentationTok&#39;  = @do@,</span></a>
+<a class="sourceLine" id="39" href="#39" data-line-number="39"><span class="co">-- &#39;AnnotationTok&#39;     = @an@,</span></a>
+<a class="sourceLine" id="40" href="#40" data-line-number="40"><span class="co">-- &#39;CommentVarTok&#39;     = @cv@,</span></a>
+<a class="sourceLine" id="41" href="#41" data-line-number="41"><span class="co">-- &#39;VariableTok&#39;       = @va@,</span></a>
+<a class="sourceLine" id="42" href="#42" data-line-number="42"><span class="co">-- &#39;ControlFlowTok&#39;    = @cf@,</span></a>
+<a class="sourceLine" id="43" href="#43" data-line-number="43"><span class="co">-- &#39;OperatorTok&#39;       = @op@,</span></a>
+<a class="sourceLine" id="44" href="#44" data-line-number="44"><span class="co">-- &#39;BuiltInTok&#39;        = @bu@,</span></a>
+<a class="sourceLine" id="45" href="#45" data-line-number="45"><span class="co">-- &#39;ExtensionTok&#39;      = @ex@,</span></a>
+<a class="sourceLine" id="46" href="#46" data-line-number="46"><span class="co">-- &#39;PreprocessorTok&#39;   = @pp@,</span></a>
+<a class="sourceLine" id="47" href="#47" data-line-number="47"><span class="co">-- &#39;AttributeTok&#39;      = @at@,</span></a>
+<a class="sourceLine" id="48" href="#48" data-line-number="48"><span class="co">-- &#39;InformationTok&#39;    = @in@,</span></a>
+<a class="sourceLine" id="49" href="#49" data-line-number="49"><span class="co">-- &#39;WarningTok&#39;        = @wa@.</span></a>
+<a class="sourceLine" id="50" href="#50" data-line-number="50"><span class="co">-- A &#39;NormalTok&#39; is not marked up at all.</span></a>
+<a class="sourceLine" id="51" href="#51" data-line-number="51"><span class="ot">formatHtmlInline ::</span> <span class="dt">FormatOptions</span> <span class="ot">-&gt;</span> [<span class="dt">SourceLine</span>] <span class="ot">-&gt;</span> <span class="dt">Html</span></a>
+<a class="sourceLine" id="52" href="#52" data-line-number="52">formatHtmlInline opts <span class="fu">=</span> wrapCode opts</a>
+<a class="sourceLine" id="53" href="#53" data-line-number="53">                      <span class="fu">.</span> mconcat <span class="fu">.</span> intersperse (toHtml <span class="st">&quot;\n&quot;</span>)</a>
+<a class="sourceLine" id="54" href="#54" data-line-number="54">                      <span class="fu">.</span> map (mapM_ (tokenToHtml opts))</a>
+<a class="sourceLine" id="55" href="#55" data-line-number="55"></a>
+<a class="sourceLine" id="56" href="#56" data-line-number="56"><span class="co">-- | Format tokens as an HTML @pre@ block. Each line is wrapped in an a</span></a>
+<a class="sourceLine" id="57" href="#57" data-line-number="57"><span class="co">-- element with the class ‘source-line’. If line numbering</span></a>
+<a class="sourceLine" id="58" href="#58" data-line-number="58"><span class="co">-- is selected, the surrounding pre is given the class ‘numberSource’,</span></a>
+<a class="sourceLine" id="59" href="#59" data-line-number="59"><span class="co">-- and the resulting html will display line numbers thanks to the included</span></a>
+<a class="sourceLine" id="60" href="#60" data-line-number="60"><span class="co">-- CSS.  See the documentation for &#39;formatHtmlInline&#39; for information about how</span></a>
+<a class="sourceLine" id="61" href="#61" data-line-number="61"><span class="co">-- tokens are encoded.</span></a>
+<a class="sourceLine" id="62" href="#62" data-line-number="62"><span class="ot">formatHtmlBlock ::</span> <span class="dt">FormatOptions</span> <span class="ot">-&gt;</span> [<span class="dt">SourceLine</span>] <span class="ot">-&gt;</span> <span class="dt">Html</span></a>
+<a class="sourceLine" id="63" href="#63" data-line-number="63">formatHtmlBlock opts ls <span class="fu">=</span></a>
+<a class="sourceLine" id="64" href="#64" data-line-number="64">  H.div <span class="fu">!</span> A.class_ (toValue <span class="st">&quot;sourceCode&quot;</span>) <span class="fu">$</span></a>
+<a class="sourceLine" id="65" href="#65" data-line-number="65">  H.pre <span class="fu">!</span> A.class_ (toValue <span class="fu">$</span> Text.unwords classes)</a>
+<a class="sourceLine" id="66" href="#66" data-line-number="66">        <span class="fu">$</span> wrapCode opts</a>
+<a class="sourceLine" id="67" href="#67" data-line-number="67">        <span class="fu">$</span> mconcat <span class="fu">.</span> intersperse (toHtml <span class="st">&quot;\n&quot;</span>)</a>
+<a class="sourceLine" id="68" href="#68" data-line-number="68">        <span class="fu">$</span> zipWith (sourceLineToHtml opts) [startNum<span class="fu">..</span>] ls</a>
+<a class="sourceLine" id="69" href="#69" data-line-number="69">  <span class="kw">where</span>  classes <span class="fu">=</span> Text.pack <span class="st">&quot;sourceCode&quot;</span> <span class="fu">:</span></a>
+<a class="sourceLine" id="70" href="#70" data-line-number="70">                   [Text.pack <span class="st">&quot;numberSource&quot;</span> <span class="fu">|</span> numberLines opts] <span class="fu">++</span></a>
+<a class="sourceLine" id="71" href="#71" data-line-number="71">                   [x <span class="fu">|</span> x <span class="ot">&lt;-</span> containerClasses opts</a>
+<a class="sourceLine" id="72" href="#72" data-line-number="72">                      , x <span class="fu">/=</span> Text.pack <span class="st">&quot;sourceCode&quot;</span>]</a>
+<a class="sourceLine" id="73" href="#73" data-line-number="73">         startNum <span class="fu">=</span> <span class="dt">LineNo</span> <span class="fu">$</span> startNumber opts</a>
+<a class="sourceLine" id="74" href="#74" data-line-number="74"></a>
+<a class="sourceLine" id="75" href="#75" data-line-number="75"><span class="ot">wrapCode ::</span> <span class="dt">FormatOptions</span> <span class="ot">-&gt;</span> <span class="dt">Html</span> <span class="ot">-&gt;</span> <span class="dt">Html</span></a>
+<a class="sourceLine" id="76" href="#76" data-line-number="76">wrapCode opts h <span class="fu">=</span> H.code <span class="fu">!</span> A.class_ (toValue <span class="fu">$</span> Text.unwords</a>
+<a class="sourceLine" id="77" href="#77" data-line-number="77">                                             <span class="fu">$</span> Text.pack <span class="st">&quot;sourceCode&quot;</span></a>
+<a class="sourceLine" id="78" href="#78" data-line-number="78">                                               <span class="fu">:</span> codeClasses opts) <span class="fu">$</span> h</a>
+<a class="sourceLine" id="79" href="#79" data-line-number="79"></a>
+<a class="sourceLine" id="80" href="#80" data-line-number="80"><span class="co">-- | Each line of source is wrapped in an (inline-block) anchor that makes</span></a>
+<a class="sourceLine" id="81" href="#81" data-line-number="81"><span class="co">-- subsequent per-line processing (e.g. adding line numnbers) possible.</span></a>
+<a class="sourceLine" id="82" href="#82" data-line-number="82"><span class="ot">sourceLineToHtml ::</span> <span class="dt">FormatOptions</span> <span class="ot">-&gt;</span> <span class="dt">LineNo</span> <span class="ot">-&gt;</span> <span class="dt">SourceLine</span> <span class="ot">-&gt;</span> <span class="dt">Html</span></a>
+<a class="sourceLine" id="83" href="#83" data-line-number="83">sourceLineToHtml opts lno cont <span class="fu">=</span></a>
+<a class="sourceLine" id="84" href="#84" data-line-number="84">  (<span class="kw">if</span> lineAnchors opts</a>
+<a class="sourceLine" id="85" href="#85" data-line-number="85">      <span class="kw">then</span> H.a   <span class="fu">!</span> A.class_ sourceLine</a>
+<a class="sourceLine" id="86" href="#86" data-line-number="86">                 <span class="fu">!</span> A.id lineNum</a>
+<a class="sourceLine" id="87" href="#87" data-line-number="87">                 <span class="fu">!</span> A.href lineRef</a>
+<a class="sourceLine" id="88" href="#88" data-line-number="88">                 <span class="fu">!</span> dataAttrib</a>
+<a class="sourceLine" id="89" href="#89" data-line-number="89">      <span class="kw">else</span> H.a   <span class="fu">!</span> A.class_ sourceLine</a>
+<a class="sourceLine" id="90" href="#90" data-line-number="90">                 <span class="fu">!</span> A.id lineNum</a>
+<a class="sourceLine" id="91" href="#91" data-line-number="91">                 <span class="fu">!</span> dataAttrib) <span class="fu">$</span> mapM_ (tokenToHtml opts) cont</a>
+<a class="sourceLine" id="92" href="#92" data-line-number="92">  <span class="kw">where</span>  sourceLine <span class="fu">=</span> toValue <span class="st">&quot;sourceLine&quot;</span></a>
+<a class="sourceLine" id="93" href="#93" data-line-number="93">         lineNum <span class="fu">=</span> toValue prefixedLineNo</a>
+<a class="sourceLine" id="94" href="#94" data-line-number="94">         lineRef <span class="fu">=</span> toValue (<span class="ch">&#39;#&#39;</span><span class="fu">:</span>prefixedLineNo)</a>
+<a class="sourceLine" id="95" href="#95" data-line-number="95">         prefixedLineNo <span class="fu">=</span> Text.unpack (lineIdPrefix opts) <span class="fu">&lt;&gt;</span> show (lineNo lno)</a>
+<a class="sourceLine" id="96" href="#96" data-line-number="96">         dataAttrib <span class="fu">=</span> H.dataAttribute (fromString <span class="st">&quot;line-number&quot;</span>)</a>
+<a class="sourceLine" id="97" href="#97" data-line-number="97">                          (toValue (show (lineNo lno)))</a>
+<a class="sourceLine" id="98" href="#98" data-line-number="98"></a>
+<a class="sourceLine" id="99" href="#99" data-line-number="99"><span class="ot">tokenToHtml ::</span> <span class="dt">FormatOptions</span> <span class="ot">-&gt;</span> <span class="dt">Token</span> <span class="ot">-&gt;</span> <span class="dt">Html</span></a>
+<a class="sourceLine" id="100" href="#100" data-line-number="100">tokenToHtml _ (<span class="dt">NormalTok</span>, txt)  <span class="fu">=</span> toHtml txt</a>
+<a class="sourceLine" id="101" href="#101" data-line-number="101">tokenToHtml opts (toktype, txt) <span class="fu">=</span></a>
+<a class="sourceLine" id="102" href="#102" data-line-number="102">  <span class="kw">if</span> titleAttributes opts</a>
+<a class="sourceLine" id="103" href="#103" data-line-number="103">     <span class="kw">then</span> sp <span class="fu">!</span> A.title (toValue <span class="fu">$</span> show toktype)</a>
+<a class="sourceLine" id="104" href="#104" data-line-number="104">     <span class="kw">else</span> sp</a>
+<a class="sourceLine" id="105" href="#105" data-line-number="105">   <span class="kw">where</span> sp <span class="fu">=</span> H.span <span class="fu">!</span> A.class_ (toValue <span class="fu">$</span> short toktype) <span class="fu">$</span> toHtml txt</a>
+<a class="sourceLine" id="106" href="#106" data-line-number="106"></a>
+<a class="sourceLine" id="107" href="#107" data-line-number="107"><span class="ot">short ::</span> <span class="dt">TokenType</span> <span class="ot">-&gt;</span> <span class="dt">String</span></a>
+<a class="sourceLine" id="108" href="#108" data-line-number="108">short <span class="dt">KeywordTok</span>        <span class="fu">=</span> <span class="st">&quot;kw&quot;</span></a>
+<a class="sourceLine" id="109" href="#109" data-line-number="109">short <span class="dt">DataTypeTok</span>       <span class="fu">=</span> <span class="st">&quot;dt&quot;</span></a>
+<a class="sourceLine" id="110" href="#110" data-line-number="110">short <span class="dt">DecValTok</span>         <span class="fu">=</span> <span class="st">&quot;dv&quot;</span></a>
+<a class="sourceLine" id="111" href="#111" data-line-number="111">short <span class="dt">BaseNTok</span>          <span class="fu">=</span> <span class="st">&quot;bn&quot;</span></a>
+<a class="sourceLine" id="112" href="#112" data-line-number="112">short <span class="dt">FloatTok</span>          <span class="fu">=</span> <span class="st">&quot;fl&quot;</span></a>
+<a class="sourceLine" id="113" href="#113" data-line-number="113">short <span class="dt">CharTok</span>           <span class="fu">=</span> <span class="st">&quot;ch&quot;</span></a>
+<a class="sourceLine" id="114" href="#114" data-line-number="114">short <span class="dt">StringTok</span>         <span class="fu">=</span> <span class="st">&quot;st&quot;</span></a>
+<a class="sourceLine" id="115" href="#115" data-line-number="115">short <span class="dt">CommentTok</span>        <span class="fu">=</span> <span class="st">&quot;co&quot;</span></a>
+<a class="sourceLine" id="116" href="#116" data-line-number="116">short <span class="dt">OtherTok</span>          <span class="fu">=</span> <span class="st">&quot;ot&quot;</span></a>
+<a class="sourceLine" id="117" href="#117" data-line-number="117">short <span class="dt">AlertTok</span>          <span class="fu">=</span> <span class="st">&quot;al&quot;</span></a>
+<a class="sourceLine" id="118" href="#118" data-line-number="118">short <span class="dt">FunctionTok</span>       <span class="fu">=</span> <span class="st">&quot;fu&quot;</span></a>
+<a class="sourceLine" id="119" href="#119" data-line-number="119">short <span class="dt">RegionMarkerTok</span>   <span class="fu">=</span> <span class="st">&quot;re&quot;</span></a>
+<a class="sourceLine" id="120" href="#120" data-line-number="120">short <span class="dt">ErrorTok</span>          <span class="fu">=</span> <span class="st">&quot;er&quot;</span></a>
+<a class="sourceLine" id="121" href="#121" data-line-number="121">short <span class="dt">ConstantTok</span>       <span class="fu">=</span> <span class="st">&quot;cn&quot;</span></a>
+<a class="sourceLine" id="122" href="#122" data-line-number="122">short <span class="dt">SpecialCharTok</span>    <span class="fu">=</span> <span class="st">&quot;sc&quot;</span></a>
+<a class="sourceLine" id="123" href="#123" data-line-number="123">short <span class="dt">VerbatimStringTok</span> <span class="fu">=</span> <span class="st">&quot;vs&quot;</span></a>
+<a class="sourceLine" id="124" href="#124" data-line-number="124">short <span class="dt">SpecialStringTok</span>  <span class="fu">=</span> <span class="st">&quot;ss&quot;</span></a>
+<a class="sourceLine" id="125" href="#125" data-line-number="125">short <span class="dt">ImportTok</span>         <span class="fu">=</span> <span class="st">&quot;im&quot;</span></a>
+<a class="sourceLine" id="126" href="#126" data-line-number="126">short <span class="dt">DocumentationTok</span>  <span class="fu">=</span> <span class="st">&quot;do&quot;</span></a>
+<a class="sourceLine" id="127" href="#127" data-line-number="127">short <span class="dt">AnnotationTok</span>     <span class="fu">=</span> <span class="st">&quot;an&quot;</span></a>
+<a class="sourceLine" id="128" href="#128" data-line-number="128">short <span class="dt">CommentVarTok</span>     <span class="fu">=</span> <span class="st">&quot;cv&quot;</span></a>
+<a class="sourceLine" id="129" href="#129" data-line-number="129">short <span class="dt">VariableTok</span>       <span class="fu">=</span> <span class="st">&quot;va&quot;</span></a>
+<a class="sourceLine" id="130" href="#130" data-line-number="130">short <span class="dt">ControlFlowTok</span>    <span class="fu">=</span> <span class="st">&quot;cf&quot;</span></a>
+<a class="sourceLine" id="131" href="#131" data-line-number="131">short <span class="dt">OperatorTok</span>       <span class="fu">=</span> <span class="st">&quot;op&quot;</span></a>
+<a class="sourceLine" id="132" href="#132" data-line-number="132">short <span class="dt">BuiltInTok</span>        <span class="fu">=</span> <span class="st">&quot;bu&quot;</span></a>
+<a class="sourceLine" id="133" href="#133" data-line-number="133">short <span class="dt">ExtensionTok</span>      <span class="fu">=</span> <span class="st">&quot;ex&quot;</span></a>
+<a class="sourceLine" id="134" href="#134" data-line-number="134">short <span class="dt">PreprocessorTok</span>   <span class="fu">=</span> <span class="st">&quot;pp&quot;</span></a>
+<a class="sourceLine" id="135" href="#135" data-line-number="135">short <span class="dt">AttributeTok</span>      <span class="fu">=</span> <span class="st">&quot;at&quot;</span></a>
+<a class="sourceLine" id="136" href="#136" data-line-number="136">short <span class="dt">InformationTok</span>    <span class="fu">=</span> <span class="st">&quot;in&quot;</span></a>
+<a class="sourceLine" id="137" href="#137" data-line-number="137">short <span class="dt">WarningTok</span>        <span class="fu">=</span> <span class="st">&quot;wa&quot;</span></a>
+<a class="sourceLine" id="138" href="#138" data-line-number="138">short <span class="dt">NormalTok</span>         <span class="fu">=</span> <span class="st">&quot;&quot;</span></a>
+<a class="sourceLine" id="139" href="#139" data-line-number="139"></a>
+<a class="sourceLine" id="140" href="#140" data-line-number="140"><span class="co">-- | Returns CSS for styling highlighted code according to the given style.</span></a>
+<a class="sourceLine" id="141" href="#141" data-line-number="141"><span class="ot">styleToCss ::</span> <span class="dt">Style</span> <span class="ot">-&gt;</span> <span class="dt">String</span></a>
+<a class="sourceLine" id="142" href="#142" data-line-number="142">styleToCss f <span class="fu">=</span> unlines <span class="fu">$</span></a>
+<a class="sourceLine" id="143" href="#143" data-line-number="143">  divspec <span class="fu">++</span> numberspec <span class="fu">++</span> colorspec <span class="fu">++</span> linkspec <span class="fu">++</span></a>
+<a class="sourceLine" id="144" href="#144" data-line-number="144">    sort (map toCss (Map.toList (tokenStyles f)))</a>
+<a class="sourceLine" id="145" href="#145" data-line-number="145">   <span class="kw">where</span> colorspec <span class="fu">=</span> [</a>
+<a class="sourceLine" id="146" href="#146" data-line-number="146">           <span class="st">&quot;div.sourceCode, pre.sourceCode, code.sourceCode\n  { &quot;</span></a>
+<a class="sourceLine" id="147" href="#147" data-line-number="147">           <span class="fu">++</span> <span class="kw">case</span> (defaultColor f, backgroundColor f) <span class="kw">of</span></a>
+<a class="sourceLine" id="148" href="#148" data-line-number="148">                (<span class="dt">Nothing</span>, <span class="dt">Nothing</span>) <span class="ot">-&gt;</span> <span class="st">&quot;&quot;</span></a>
+<a class="sourceLine" id="149" href="#149" data-line-number="149">                (<span class="dt">Just</span> c, <span class="dt">Nothing</span>)  <span class="ot">-&gt;</span> <span class="st">&quot;color: &quot;</span> <span class="fu">++</span> fromColor c <span class="fu">++</span> <span class="st">&quot;;&quot;</span></a>
+<a class="sourceLine" id="150" href="#150" data-line-number="150">                (<span class="dt">Nothing</span>, <span class="dt">Just</span> c)  <span class="ot">-&gt;</span> <span class="st">&quot;background-color: &quot;</span> <span class="fu">++</span> fromColor c <span class="fu">++</span> <span class="st">&quot;;&quot;</span></a>
+<a class="sourceLine" id="151" href="#151" data-line-number="151">                (<span class="dt">Just</span> c1, <span class="dt">Just</span> c2) <span class="ot">-&gt;</span> <span class="st">&quot;color: &quot;</span> <span class="fu">++</span> fromColor c1</a>
+<a class="sourceLine" id="152" href="#152" data-line-number="152">                     <span class="fu">++</span> <span class="st">&quot;; background-color: &quot;</span> <span class="fu">++</span> fromColor c2 <span class="fu">++</span> <span class="st">&quot;;&quot;</span></a>
+<a class="sourceLine" id="153" href="#153" data-line-number="153">           <span class="fu">++</span> <span class="st">&quot; }&quot;</span>]</a>
+<a class="sourceLine" id="154" href="#154" data-line-number="154">         numberspec <span class="fu">=</span> [</a>
+<a class="sourceLine" id="155" href="#155" data-line-number="155">            <span class="st">&quot;pre.numberSource a.sourceLine&quot;</span></a>
+<a class="sourceLine" id="156" href="#156" data-line-number="156">          , <span class="st">&quot;  { position: relative; }&quot;</span></a>
+<a class="sourceLine" id="157" href="#157" data-line-number="157">          , <span class="st">&quot;pre.numberSource a.sourceLine::before&quot;</span></a>
+<a class="sourceLine" id="158" href="#158" data-line-number="158">          , <span class="st">&quot;  { content: attr(data-line-number);&quot;</span></a>
+<a class="sourceLine" id="159" href="#159" data-line-number="159">          , <span class="st">&quot;    position: absolute; left: -5em; text-align: right; vertical-align: baseline;&quot;</span></a>
+<a class="sourceLine" id="160" href="#160" data-line-number="160">          , <span class="st">&quot;    border: none; pointer-events: all;&quot;</span></a>
+<a class="sourceLine" id="161" href="#161" data-line-number="161">          , <span class="st">&quot;    -webkit-touch-callout: none; -webkit-user-select: none;&quot;</span></a>
+<a class="sourceLine" id="162" href="#162" data-line-number="162">          , <span class="st">&quot;    -khtml-user-select: none; -moz-user-select: none;&quot;</span></a>
+<a class="sourceLine" id="163" href="#163" data-line-number="163">          , <span class="st">&quot;    -ms-user-select: none; user-select: none;&quot;</span></a>
+<a class="sourceLine" id="164" href="#164" data-line-number="164">          , <span class="st">&quot;    padding: 0 4px; width: 4em;&quot;</span></a>
+<a class="sourceLine" id="165" href="#165" data-line-number="165">          , maybe <span class="st">&quot;&quot;</span> (\c <span class="ot">-&gt;</span> <span class="st">&quot;    background-color: &quot;</span> <span class="fu">++</span> fromColor c <span class="fu">++</span> <span class="st">&quot;;\n&quot;</span>)</a>
+<a class="sourceLine" id="166" href="#166" data-line-number="166">              (lineNumberBackgroundColor f) <span class="fu">++</span></a>
+<a class="sourceLine" id="167" href="#167" data-line-number="167">            maybe <span class="st">&quot;&quot;</span> (\c <span class="ot">-&gt;</span> <span class="st">&quot;    color: &quot;</span> <span class="fu">++</span> fromColor c <span class="fu">++</span> <span class="st">&quot;;\n&quot;</span>)</a>
+<a class="sourceLine" id="168" href="#168" data-line-number="168">              (lineNumberColor f) <span class="fu">++</span></a>
+<a class="sourceLine" id="169" href="#169" data-line-number="169">            <span class="st">&quot;  }&quot;</span></a>
+<a class="sourceLine" id="170" href="#170" data-line-number="170">          , <span class="st">&quot;pre.numberSource { margin-left: 3em; &quot;</span> <span class="fu">++</span></a>
+<a class="sourceLine" id="171" href="#171" data-line-number="171">              maybe <span class="st">&quot;&quot;</span> (\c <span class="ot">-&gt;</span> <span class="st">&quot;border-left: 1px solid &quot;</span> <span class="fu">++</span> fromColor c <span class="fu">++</span> <span class="st">&quot;; &quot;</span>) (lineNumberColor f) <span class="fu">++</span></a>
+<a class="sourceLine" id="172" href="#172" data-line-number="172">              <span class="st">&quot; padding-left: 4px; }&quot;</span></a>
+<a class="sourceLine" id="173" href="#173" data-line-number="173">          ]</a>
+<a class="sourceLine" id="174" href="#174" data-line-number="174">         divspec <span class="fu">=</span> [</a>
+<a class="sourceLine" id="175" href="#175" data-line-number="175">            <span class="st">&quot;a.sourceLine { display: inline-block; min-height: 1.25em; }&quot;</span></a>
+<a class="sourceLine" id="176" href="#176" data-line-number="176">          , <span class="st">&quot;a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }&quot;</span></a>
+<a class="sourceLine" id="177" href="#177" data-line-number="177">          , <span class="st">&quot;.sourceCode { overflow: visible; }&quot;</span> <span class="co">-- needed for line numbers</span></a>
+<a class="sourceLine" id="178" href="#178" data-line-number="178">          , <span class="st">&quot;code.sourceCode { white-space: pre; }&quot;</span></a>
+<a class="sourceLine" id="179" href="#179" data-line-number="179">          , <span class="st">&quot;@media print {&quot;</span></a>
+<a class="sourceLine" id="180" href="#180" data-line-number="180">          , <span class="st">&quot;code.sourceCode { white-space: pre-wrap; }&quot;</span></a>
+<a class="sourceLine" id="181" href="#181" data-line-number="181">          , <span class="st">&quot;a.sourceLine { text-indent: -1em; padding-left: 1em; }&quot;</span></a>
+<a class="sourceLine" id="182" href="#182" data-line-number="182">          , <span class="st">&quot;}&quot;</span></a>
+<a class="sourceLine" id="183" href="#183" data-line-number="183">          ]</a>
+<a class="sourceLine" id="184" href="#184" data-line-number="184">         linkspec <span class="fu">=</span> [ <span class="st">&quot;@media screen {&quot;</span></a>
+<a class="sourceLine" id="185" href="#185" data-line-number="185">          , <span class="st">&quot;a.sourceLine::before { text-decoration: underline; color: initial; }&quot;</span></a>
+<a class="sourceLine" id="186" href="#186" data-line-number="186">          , <span class="st">&quot;}&quot;</span></a>
+<a class="sourceLine" id="187" href="#187" data-line-number="187">          ]</a>
+<a class="sourceLine" id="188" href="#188" data-line-number="188"></a>
+<a class="sourceLine" id="189" href="#189" data-line-number="189"><span class="ot">toCss ::</span> (<span class="dt">TokenType</span>, <span class="dt">TokenStyle</span>) <span class="ot">-&gt;</span> <span class="dt">String</span></a>
+<a class="sourceLine" id="190" href="#190" data-line-number="190">toCss (t,tf) <span class="fu">=</span> <span class="st">&quot;code span.&quot;</span> <span class="fu">++</span> short t <span class="fu">++</span> <span class="st">&quot; { &quot;</span></a>
+<a class="sourceLine" id="191" href="#191" data-line-number="191">                <span class="fu">++</span> colorspec <span class="fu">++</span> backgroundspec <span class="fu">++</span> weightspec <span class="fu">++</span> stylespec</a>
+<a class="sourceLine" id="192" href="#192" data-line-number="192">                <span class="fu">++</span> decorationspec <span class="fu">++</span> <span class="st">&quot;} /* &quot;</span> <span class="fu">++</span> showTokenType t <span class="fu">++</span> <span class="st">&quot; */&quot;</span></a>
+<a class="sourceLine" id="193" href="#193" data-line-number="193">  <span class="kw">where</span> colorspec <span class="fu">=</span> maybe <span class="st">&quot;&quot;</span> (\col <span class="ot">-&gt;</span> <span class="st">&quot;color: &quot;</span> <span class="fu">++</span> fromColor col <span class="fu">++</span> <span class="st">&quot;; &quot;</span>) <span class="fu">$</span> tokenColor tf</a>
+<a class="sourceLine" id="194" href="#194" data-line-number="194">        backgroundspec <span class="fu">=</span> maybe <span class="st">&quot;&quot;</span> (\col <span class="ot">-&gt;</span> <span class="st">&quot;background-color: &quot;</span> <span class="fu">++</span> fromColor col <span class="fu">++</span> <span class="st">&quot;; &quot;</span>) <span class="fu">$</span> tokenBackground tf</a>
+<a class="sourceLine" id="195" href="#195" data-line-number="195">        weightspec <span class="fu">=</span> <span class="kw">if</span> tokenBold tf <span class="kw">then</span> <span class="st">&quot;font-weight: bold; &quot;</span> <span class="kw">else</span> <span class="st">&quot;&quot;</span></a>
+<a class="sourceLine" id="196" href="#196" data-line-number="196">        stylespec  <span class="fu">=</span> <span class="kw">if</span> tokenItalic tf <span class="kw">then</span> <span class="st">&quot;font-style: italic; &quot;</span> <span class="kw">else</span> <span class="st">&quot;&quot;</span></a>
+<a class="sourceLine" id="197" href="#197" data-line-number="197">        decorationspec <span class="fu">=</span> <span class="kw">if</span> tokenUnderline tf <span class="kw">then</span> <span class="st">&quot;text-decoration: underline; &quot;</span> <span class="kw">else</span> <span class="st">&quot;&quot;</span></a>
+<a class="sourceLine" id="198" href="#198" data-line-number="198">        showTokenType t&#39; <span class="fu">=</span> <span class="kw">case</span> reverse (show t&#39;) <span class="kw">of</span></a>
+<a class="sourceLine" id="199" href="#199" data-line-number="199">                             <span class="ch">&#39;k&#39;</span><span class="fu">:</span><span class="ch">&#39;o&#39;</span><span class="fu">:</span><span class="ch">&#39;T&#39;</span><span class="fu">:</span>xs <span class="ot">-&gt;</span> reverse xs</a>
+<a class="sourceLine" id="200" href="#200" data-line-number="200">                             _              <span class="ot">-&gt;</span> <span class="st">&quot;&quot;</span></a>
+<a class="sourceLine" id="201" href="#201" data-line-number="201"></a></code></pre></div></body></html>
