@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html><head><title>src/Skylighting/Format/HTML.hs</title><meta charset="utf-8"><meta name="generator" content="highlight-kate"><style type="text/css">a.sourceLine{display:inline-block;line-height:1.25;pointer-events:none;color:inherit;text-decoration:inherit}a.sourceLine:empty{height:1.19999em;position:absolute}.sourceCode{overflow:visible}div.sourceCode{margin:1em 0 1em 0}pre.sourceCode{margin:0 0 0 0}code.sourceCode{white-space:pre;position:relative}pre.numberSource{margin-left:3em;border-left:solid 1px #a0a0a0;padding-left:4px}pre.numberSource a.sourceLine{position:relative}pre.numberSource a.sourceLine:empty{position:absolute}pre.numberSource a.sourceLine::before{content:attr(data-line-number);position:absolute;left:-5em;text-align:right;vertical-align:baseline;border:none 0 none;pointer-events:all;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;padding:0 4px 0 4px;width:4em;background-color:#ffffff;color:#a0a0a0}div.sourceCode pre,div.sourceCode code{color:#1f1c1b;background-color:#ffffff}code span.kw{color:#1f1c1b;font-weight:bold}code span.dt{color:#0057ae}code span.dv{color:#b08000}code span.bn{color:#b08000}code span.fl{color:#b08000}code span.cn{color:#aa5500}code span.ch{color:#924c9d}code span.sc{color:#3daee9}code span.st{color:#bf0303}code span.vs{color:#bf0303}code span.ss{color:#ff5500}code span.im{color:#ff5500}code span.co{color:#898887}code span.do{color:#607880}code span.an{color:#ca60ca}code span.cv{color:#0095ff}code span.ot{color:#006e28}code span.fu{color:#644a9b}code span.va{color:#0057ae}code span.cf{color:#1f1c1b;font-weight:bold}code span.op{color:#1f1c1b}code span.bu{color:#644a9b;font-weight:bold}code span.ex{color:#0095ff;font-weight:bold}code span.pp{color:#006e28}code span.at{color:#0057ae}code span.re{color:#0057ae;background-color:#e0e9f8}code span.in{color:#b08000}code span.wa{color:#bf0303}code span.al{color:#bf0303;background-color:#f7e6e6;font-weight:bold}code span.er{color:#bf0303;text-decoration:underline}code span.{color:#1f1c1b}@media screen{div.sourceCode{overflow:auto}}@media print{code.sourceCode{white-space:pre-wrap}a.sourceLine{text-indent:-1em;padding-left:1em}}@media screen{a.sourceLine::before{text-decoration:underline}}</style></head><body><div class="sourceCode"><pre class="sourceCode numberSource"><code class="sourceCode"><a class="sourceLine" id="1" href="#1" data-line-number="1"><span class="kw">module</span> <span class="dt">Skylighting.Format.HTML</span> (</a>
+<html><head><title>src/Skylighting/Format/HTML.hs</title><meta charset="utf-8"><meta name="generator" content="highlight-kate"><style type="text/css">a.sourceLine{display:inline-block;line-height:1.25;pointer-events:none;color:inherit;text-decoration:inherit}a.sourceLine:empty{height:1.19999em;position:absolute}.sourceCode{overflow:visible}div.sourceCode{margin:1em 0 1em 0}pre.sourceCode{margin:0 0 0 0}code.sourceCode{white-space:pre;position:relative}pre.numberSource{margin-left:3em;border-left:solid 1px #a0a0a0;padding-left:4px}pre.numberSource a.sourceLine{position:relative}pre.numberSource a.sourceLine:empty{position:absolute}pre.numberSource a.sourceLine::before{content:attr(data-line-number);position:absolute;left:-5em;text-align:right;vertical-align:baseline;border:none 0 none;pointer-events:all;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;padding:0 4px 0 4px;width:4em;background-color:#ffffff;color:#a0a0a0}div.sourceCode{color:#1f1c1b;background-color:#ffffff}code span.kw{color:#1f1c1b;font-weight:bold}code span.dt{color:#0057ae}code span.dv{color:#b08000}code span.bn{color:#b08000}code span.fl{color:#b08000}code span.cn{color:#aa5500}code span.ch{color:#924c9d}code span.sc{color:#3daee9}code span.st{color:#bf0303}code span.vs{color:#bf0303}code span.ss{color:#ff5500}code span.im{color:#ff5500}code span.co{color:#898887}code span.do{color:#607880}code span.an{color:#ca60ca}code span.cv{color:#0095ff}code span.ot{color:#006e28}code span.fu{color:#644a9b}code span.va{color:#0057ae}code span.cf{color:#1f1c1b;font-weight:bold}code span.op{color:#1f1c1b}code span.bu{color:#644a9b;font-weight:bold}code span.ex{color:#0095ff;font-weight:bold}code span.pp{color:#006e28}code span.at{color:#0057ae}code span.re{color:#0057ae;background-color:#e0e9f8}code span.in{color:#b08000}code span.wa{color:#bf0303}code span.al{color:#bf0303;background-color:#f7e6e6;font-weight:bold}code span.er{color:#bf0303;text-decoration:underline}code span.{color:#1f1c1b}@media screen{div.sourceCode{overflow-x:auto}}@media print{code.sourceCode{white-space:pre-wrap}a.sourceLine{text-indent:-1em;padding-left:1em}}@media screen{a.sourceLine::before{text-decoration:underline}}</style></head><body><div class="sourceCode"><pre class="sourceCode numberSource"><code class="sourceCode"><a class="sourceLine" id="1" href="#1" data-line-number="1"><span class="kw">module</span> <span class="dt">Skylighting.Format.HTML</span> (</a>
 <a class="sourceLine" id="2" href="#2" data-line-number="2">      formatHtmlInline</a>
 <a class="sourceLine" id="3" href="#3" data-line-number="3">    , formatHtmlBlock</a>
 <a class="sourceLine" id="4" href="#4" data-line-number="4">    , styleToCss</a>
@@ -159,108 +159,105 @@
 <a class="sourceLine" id="158" href="#158" data-line-number="158">           <span class="kw">case</span> (defaultColor f, backgroundColor f) <span class="kw">of</span></a>
 <a class="sourceLine" id="159" href="#159" data-line-number="159">             (<span class="dt">Nothing</span>, <span class="dt">Nothing</span>) <span class="ot">-&gt;</span> pure ()</a>
 <a class="sourceLine" id="160" href="#160" data-line-number="160">             (<span class="dt">Just</span> c, <span class="dt">Nothing</span>)  <span class="ot">-&gt;</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="161" href="#161" data-line-number="161">               C.pre <span class="fu">&lt;&gt;</span> C.code <span class="fu">C.?</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="162" href="#162" data-line-number="162">                 C.color <span class="fu">$</span> fromColor c</a>
-<a class="sourceLine" id="163" href="#163" data-line-number="163">             (<span class="dt">Nothing</span>, <span class="dt">Just</span> c)  <span class="ot">-&gt;</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="164" href="#164" data-line-number="164">               C.pre <span class="fu">&lt;&gt;</span> C.code <span class="fu">C.?</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="165" href="#165" data-line-number="165">                 C.backgroundColor <span class="fu">$</span> fromColor c</a>
-<a class="sourceLine" id="166" href="#166" data-line-number="166">             (<span class="dt">Just</span> c1, <span class="dt">Just</span> c2) <span class="ot">-&gt;</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="167" href="#167" data-line-number="167">               C.pre <span class="fu">&lt;&gt;</span> C.code <span class="fu">C.?</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="168" href="#168" data-line-number="168">                 C.color <span class="fu">$</span> fromColor c1</a>
-<a class="sourceLine" id="169" href="#169" data-line-number="169">                 C.backgroundColor <span class="fu">$</span> fromColor c2</a>
-<a class="sourceLine" id="170" href="#170" data-line-number="170"></a>
-<a class="sourceLine" id="171" href="#171" data-line-number="171">         numberspec <span class="fu">=</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="172" href="#172" data-line-number="172">          C.pre <span class="fu">C.#</span> numberSource <span class="fu">C.?</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="173" href="#173" data-line-number="173">            C.marginLeft <span class="fu">.</span> C.em <span class="fu">$</span> <span class="dv">3</span></a>
-<a class="sourceLine" id="174" href="#174" data-line-number="174">            pure () <span class="ot">`maybe`</span> (\c <span class="ot">-&gt;</span> C.borderLeft C.solid (C.px <span class="dv">1</span>) <span class="fu">$</span> fromColor c) <span class="fu">$</span> lineNumberColor f</a>
-<a class="sourceLine" id="175" href="#175" data-line-number="175"></a>
-<a class="sourceLine" id="176" href="#176" data-line-number="176">            C.paddingLeft <span class="fu">.</span> C.px <span class="fu">$</span> <span class="dv">4</span></a>
-<a class="sourceLine" id="177" href="#177" data-line-number="177"></a>
-<a class="sourceLine" id="178" href="#178" data-line-number="178">            C.a <span class="fu">C.#</span> sourceLine <span class="fu">C.?</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="179" href="#179" data-line-number="179">              C.position C.relative</a>
-<a class="sourceLine" id="180" href="#180" data-line-number="180">              C.empty <span class="fu">C.&amp;</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="181" href="#181" data-line-number="181">                C.position C.absolute</a>
-<a class="sourceLine" id="182" href="#182" data-line-number="182"></a>
-<a class="sourceLine" id="183" href="#183" data-line-number="183">              C.before <span class="fu">C.&amp;</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="184" href="#184" data-line-number="184">                C.content <span class="fu">.</span> C.attrContent <span class="fu">.</span> Text.pack <span class="fu">$</span> <span class="st">&quot;data-line-number&quot;</span></a>
-<a class="sourceLine" id="185" href="#185" data-line-number="185">                C.position C.absolute</a>
-<a class="sourceLine" id="186" href="#186" data-line-number="186">                C.left <span class="fu">.</span> C.em <span class="fu">$</span> (<span class="fu">-</span><span class="dv">5</span>)</a>
-<a class="sourceLine" id="187" href="#187" data-line-number="187">                C.textAlign <span class="fu">.</span> C.alignSide <span class="fu">$</span> C.sideRight</a>
-<a class="sourceLine" id="188" href="#188" data-line-number="188">                C.verticalAlign C.vAlignBaseline</a>
-<a class="sourceLine" id="189" href="#189" data-line-number="189">                C.border C.none C.nil C.none</a>
-<a class="sourceLine" id="190" href="#190" data-line-number="190">                C.pointerEvents C.allEvents</a>
-<a class="sourceLine" id="191" href="#191" data-line-number="191">                C.userSelect C.none</a>
-<a class="sourceLine" id="192" href="#192" data-line-number="192">                C.sym2 C.padding C.nil (C.px <span class="dv">4</span>)</a>
-<a class="sourceLine" id="193" href="#193" data-line-number="193">                C.width <span class="fu">.</span> C.em <span class="fu">$</span> <span class="dv">4</span></a>
-<a class="sourceLine" id="194" href="#194" data-line-number="194">                pure () <span class="ot">`maybe`</span> (\c <span class="ot">-&gt;</span> C.backgroundColor <span class="fu">$</span> fromColor c) <span class="fu">$</span> lineNumberBackgroundColor f</a>
-<a class="sourceLine" id="195" href="#195" data-line-number="195">                pure () <span class="ot">`maybe`</span> (\c <span class="ot">-&gt;</span> C.color <span class="fu">$</span> fromColor c) <span class="fu">$</span> lineNumberColor f</a>
-<a class="sourceLine" id="196" href="#196" data-line-number="196"></a>
-<a class="sourceLine" id="197" href="#197" data-line-number="197">         divspec <span class="fu">=</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="198" href="#198" data-line-number="198">          C.a <span class="fu">C.#</span> sourceLine <span class="fu">C.?</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="199" href="#199" data-line-number="199">            C.display C.inlineBlock</a>
-<a class="sourceLine" id="200" href="#200" data-line-number="200">            C.lineHeight <span class="fu">.</span> C.unitless <span class="fu">$</span> <span class="fl">1.25</span></a>
-<a class="sourceLine" id="201" href="#201" data-line-number="201">            C.pointerEvents C.none</a>
-<a class="sourceLine" id="202" href="#202" data-line-number="202">            C.color C.inherit</a>
-<a class="sourceLine" id="203" href="#203" data-line-number="203">            C.textDecoration C.inherit</a>
-<a class="sourceLine" id="204" href="#204" data-line-number="204"></a>
-<a class="sourceLine" id="205" href="#205" data-line-number="205">            C.empty <span class="fu">C.&amp;</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="206" href="#206" data-line-number="206">              <span class="co">-- Correct empty line height</span></a>
-<a class="sourceLine" id="207" href="#207" data-line-number="207">              C.height <span class="fu">.</span> C.em <span class="fu">$</span> <span class="fl">1.2</span></a>
-<a class="sourceLine" id="208" href="#208" data-line-number="208">              C.position C.absolute</a>
-<a class="sourceLine" id="209" href="#209" data-line-number="209"></a>
-<a class="sourceLine" id="210" href="#210" data-line-number="210">          C.star <span class="fu">C.#</span> sourceCode <span class="fu">C.?</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="211" href="#211" data-line-number="211">            <span class="co">-- Needed for line numbers to be displayed</span></a>
-<a class="sourceLine" id="212" href="#212" data-line-number="212">            C.overflow C.visible</a>
-<a class="sourceLine" id="213" href="#213" data-line-number="213"></a>
-<a class="sourceLine" id="214" href="#214" data-line-number="214">          <span class="co">-- Collapse neighbours correctly</span></a>
-<a class="sourceLine" id="215" href="#215" data-line-number="215">          C.div <span class="fu">C.#</span> sourceCode <span class="fu">C.?</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="216" href="#216" data-line-number="216">            C.sym2 C.margin (C.em <span class="dv">1</span>) C.nil</a>
-<a class="sourceLine" id="217" href="#217" data-line-number="217">          C.pre <span class="fu">C.#</span> sourceCode <span class="fu">C.?</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="218" href="#218" data-line-number="218">            C.sym C.margin C.nil</a>
-<a class="sourceLine" id="219" href="#219" data-line-number="219"></a>
-<a class="sourceLine" id="220" href="#220" data-line-number="220">          C.code <span class="fu">C.#</span> sourceCode <span class="fu">C.?</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="221" href="#221" data-line-number="221">            C.whiteSpace CT.pre</a>
-<a class="sourceLine" id="222" href="#222" data-line-number="222">            <span class="co">-- Needed for contents to be position: absolute</span></a>
-<a class="sourceLine" id="223" href="#223" data-line-number="223">            C.position C.relative</a>
-<a class="sourceLine" id="224" href="#224" data-line-number="224"></a>
-<a class="sourceLine" id="225" href="#225" data-line-number="225">          C.query CM.screen [] <span class="fu">$</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="226" href="#226" data-line-number="226">            C.div <span class="fu">C.#</span> sourceCode <span class="fu">C.?</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="227" href="#227" data-line-number="227">              C.overflow C.auto</a>
-<a class="sourceLine" id="228" href="#228" data-line-number="228"></a>
-<a class="sourceLine" id="229" href="#229" data-line-number="229">          C.query CM.print [] <span class="fu">$</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="230" href="#230" data-line-number="230">            C.code <span class="fu">C.#</span> sourceCode <span class="fu">C.?</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="231" href="#231" data-line-number="231">              C.whiteSpace C.preWrap</a>
-<a class="sourceLine" id="232" href="#232" data-line-number="232">            C.a <span class="fu">C.#</span> sourceLine <span class="fu">C.?</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="233" href="#233" data-line-number="233">              C.textIndent <span class="fu">.</span> C.indent <span class="fu">.</span> C.em <span class="fu">$</span> (<span class="fu">-</span><span class="dv">1</span>)</a>
-<a class="sourceLine" id="234" href="#234" data-line-number="234">              C.paddingLeft <span class="fu">.</span> C.em <span class="fu">$</span> <span class="dv">1</span></a>
-<a class="sourceLine" id="235" href="#235" data-line-number="235"></a>
-<a class="sourceLine" id="236" href="#236" data-line-number="236">         linkspec <span class="fu">=</span> C.query CM.screen [] <span class="fu">$</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="237" href="#237" data-line-number="237">          C.a <span class="fu">C.#</span> sourceLine <span class="fu">C.#</span> C.before <span class="fu">C.?</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="238" href="#238" data-line-number="238">            C.textDecoration C.underline</a>
-<a class="sourceLine" id="239" href="#239" data-line-number="239"></a>
-<a class="sourceLine" id="240" href="#240" data-line-number="240"><span class="ot">         numberSource ::</span> <span class="dt">C.Refinement</span></a>
-<a class="sourceLine" id="241" href="#241" data-line-number="241">         numberSource <span class="fu">=</span> fromString <span class="st">&quot;.numberSource&quot;</span></a>
-<a class="sourceLine" id="242" href="#242" data-line-number="242"><span class="ot">         sourceCode ::</span> <span class="dt">C.Refinement</span></a>
-<a class="sourceLine" id="243" href="#243" data-line-number="243">         sourceCode <span class="fu">=</span> fromString <span class="st">&quot;.sourceCode&quot;</span></a>
-<a class="sourceLine" id="244" href="#244" data-line-number="244"><span class="ot">         sourceLine ::</span> <span class="dt">C.Refinement</span></a>
-<a class="sourceLine" id="245" href="#245" data-line-number="245">         sourceLine <span class="fu">=</span> fromString <span class="st">&quot;.sourceLine&quot;</span></a>
-<a class="sourceLine" id="246" href="#246" data-line-number="246"></a>
-<a class="sourceLine" id="247" href="#247" data-line-number="247"><span class="ot">toCss ::</span> (<span class="dt">TokenType</span>, <span class="dt">TokenStyle</span>) <span class="ot">-&gt;</span> <span class="dt">Css</span></a>
-<a class="sourceLine" id="248" href="#248" data-line-number="248">toCss (t,tf) <span class="fu">=</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="249" href="#249" data-line-number="249">        C.code <span class="fu">C.**</span> C.span <span class="fu">C.#</span> shortR t <span class="fu">C.?</span> <span class="kw">do</span></a>
-<a class="sourceLine" id="250" href="#250" data-line-number="250">            colorspec</a>
-<a class="sourceLine" id="251" href="#251" data-line-number="251">            backgroundspec</a>
-<a class="sourceLine" id="252" href="#252" data-line-number="252">            weightspec</a>
-<a class="sourceLine" id="253" href="#253" data-line-number="253">            stylespec</a>
-<a class="sourceLine" id="254" href="#254" data-line-number="254">            decorationspec</a>
-<a class="sourceLine" id="255" href="#255" data-line-number="255">            <span class="co">-- C.comment $ showTokenType t</span></a>
-<a class="sourceLine" id="256" href="#256" data-line-number="256">  <span class="kw">where</span> colorspec <span class="fu">=</span> pure () <span class="ot">`maybe`</span> (\col <span class="ot">-&gt;</span> C.color <span class="fu">$</span> fromColor col) <span class="fu">$</span> tokenColor tf</a>
-<a class="sourceLine" id="257" href="#257" data-line-number="257">        backgroundspec <span class="fu">=</span> pure () <span class="ot">`maybe`</span> (\col <span class="ot">-&gt;</span> C.backgroundColor <span class="fu">$</span> fromColor col) <span class="fu">$</span> tokenBackground tf</a>
-<a class="sourceLine" id="258" href="#258" data-line-number="258">        weightspec <span class="fu">=</span> <span class="kw">if</span> tokenBold tf <span class="kw">then</span> C.fontWeight C.bold <span class="kw">else</span> pure ()</a>
-<a class="sourceLine" id="259" href="#259" data-line-number="259">        stylespec  <span class="fu">=</span> <span class="kw">if</span> tokenItalic tf <span class="kw">then</span> C.fontStyle C.italic <span class="kw">else</span> pure ()</a>
-<a class="sourceLine" id="260" href="#260" data-line-number="260">        decorationspec <span class="fu">=</span> <span class="kw">if</span> tokenUnderline tf <span class="kw">then</span> C.textDecoration C.underline <span class="kw">else</span> pure ()</a>
-<a class="sourceLine" id="261" href="#261" data-line-number="261">        shortR <span class="fu">=</span> C.byClass <span class="fu">.</span> Text.pack <span class="fu">.</span> short</a>
-<a class="sourceLine" id="262" href="#262" data-line-number="262">        <span class="co">-- showTokenType t&#39; = case reverse (show t&#39;) of</span></a>
-<a class="sourceLine" id="263" href="#263" data-line-number="263">        <span class="co">--                      &#39;k&#39;:&#39;o&#39;:&#39;T&#39;:xs -&gt; reverse xs</span></a>
-<a class="sourceLine" id="264" href="#264" data-line-number="264">        <span class="co">--                      _              -&gt; &quot;&quot;</span></a>
-<a class="sourceLine" id="265" href="#265" data-line-number="265"></a></code></pre></div></body></html>
+<a class="sourceLine" id="161" href="#161" data-line-number="161">               C.color <span class="fu">$</span> fromColor c</a>
+<a class="sourceLine" id="162" href="#162" data-line-number="162">             (<span class="dt">Nothing</span>, <span class="dt">Just</span> c)  <span class="ot">-&gt;</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="163" href="#163" data-line-number="163">               C.backgroundColor <span class="fu">$</span> fromColor c</a>
+<a class="sourceLine" id="164" href="#164" data-line-number="164">             (<span class="dt">Just</span> c1, <span class="dt">Just</span> c2) <span class="ot">-&gt;</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="165" href="#165" data-line-number="165">               C.color <span class="fu">$</span> fromColor c1</a>
+<a class="sourceLine" id="166" href="#166" data-line-number="166">               C.backgroundColor <span class="fu">$</span> fromColor c2</a>
+<a class="sourceLine" id="167" href="#167" data-line-number="167"></a>
+<a class="sourceLine" id="168" href="#168" data-line-number="168">         numberspec <span class="fu">=</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="169" href="#169" data-line-number="169">          C.pre <span class="fu">C.#</span> numberSource <span class="fu">C.?</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="170" href="#170" data-line-number="170">            C.marginLeft <span class="fu">.</span> C.em <span class="fu">$</span> <span class="dv">3</span></a>
+<a class="sourceLine" id="171" href="#171" data-line-number="171">            pure () <span class="ot">`maybe`</span> (\c <span class="ot">-&gt;</span> C.borderLeft C.solid (C.px <span class="dv">1</span>) <span class="fu">$</span> fromColor c) <span class="fu">$</span> lineNumberColor f</a>
+<a class="sourceLine" id="172" href="#172" data-line-number="172"></a>
+<a class="sourceLine" id="173" href="#173" data-line-number="173">            C.paddingLeft <span class="fu">.</span> C.px <span class="fu">$</span> <span class="dv">4</span></a>
+<a class="sourceLine" id="174" href="#174" data-line-number="174"></a>
+<a class="sourceLine" id="175" href="#175" data-line-number="175">            C.a <span class="fu">C.#</span> sourceLine <span class="fu">C.?</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="176" href="#176" data-line-number="176">              C.position C.relative</a>
+<a class="sourceLine" id="177" href="#177" data-line-number="177">              C.empty <span class="fu">C.&amp;</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="178" href="#178" data-line-number="178">                C.position C.absolute</a>
+<a class="sourceLine" id="179" href="#179" data-line-number="179"></a>
+<a class="sourceLine" id="180" href="#180" data-line-number="180">              C.before <span class="fu">C.&amp;</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="181" href="#181" data-line-number="181">                C.content <span class="fu">.</span> C.attrContent <span class="fu">.</span> Text.pack <span class="fu">$</span> <span class="st">&quot;data-line-number&quot;</span></a>
+<a class="sourceLine" id="182" href="#182" data-line-number="182">                C.position C.absolute</a>
+<a class="sourceLine" id="183" href="#183" data-line-number="183">                C.left <span class="fu">.</span> C.em <span class="fu">$</span> (<span class="fu">-</span><span class="dv">5</span>)</a>
+<a class="sourceLine" id="184" href="#184" data-line-number="184">                C.textAlign <span class="fu">.</span> C.alignSide <span class="fu">$</span> C.sideRight</a>
+<a class="sourceLine" id="185" href="#185" data-line-number="185">                C.verticalAlign C.vAlignBaseline</a>
+<a class="sourceLine" id="186" href="#186" data-line-number="186">                C.border C.none C.nil C.none</a>
+<a class="sourceLine" id="187" href="#187" data-line-number="187">                C.pointerEvents C.allEvents</a>
+<a class="sourceLine" id="188" href="#188" data-line-number="188">                C.userSelect C.none</a>
+<a class="sourceLine" id="189" href="#189" data-line-number="189">                C.sym2 C.padding C.nil (C.px <span class="dv">4</span>)</a>
+<a class="sourceLine" id="190" href="#190" data-line-number="190">                C.width <span class="fu">.</span> C.em <span class="fu">$</span> <span class="dv">4</span></a>
+<a class="sourceLine" id="191" href="#191" data-line-number="191">                pure () <span class="ot">`maybe`</span> (\c <span class="ot">-&gt;</span> C.backgroundColor <span class="fu">$</span> fromColor c) <span class="fu">$</span> lineNumberBackgroundColor f</a>
+<a class="sourceLine" id="192" href="#192" data-line-number="192">                pure () <span class="ot">`maybe`</span> (\c <span class="ot">-&gt;</span> C.color <span class="fu">$</span> fromColor c) <span class="fu">$</span> lineNumberColor f</a>
+<a class="sourceLine" id="193" href="#193" data-line-number="193"></a>
+<a class="sourceLine" id="194" href="#194" data-line-number="194">         divspec <span class="fu">=</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="195" href="#195" data-line-number="195">          C.a <span class="fu">C.#</span> sourceLine <span class="fu">C.?</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="196" href="#196" data-line-number="196">            C.display C.inlineBlock</a>
+<a class="sourceLine" id="197" href="#197" data-line-number="197">            C.lineHeight <span class="fu">.</span> C.unitless <span class="fu">$</span> <span class="fl">1.25</span></a>
+<a class="sourceLine" id="198" href="#198" data-line-number="198">            C.pointerEvents C.none</a>
+<a class="sourceLine" id="199" href="#199" data-line-number="199">            C.color C.inherit</a>
+<a class="sourceLine" id="200" href="#200" data-line-number="200">            C.textDecoration C.inherit</a>
+<a class="sourceLine" id="201" href="#201" data-line-number="201"></a>
+<a class="sourceLine" id="202" href="#202" data-line-number="202">            C.empty <span class="fu">C.&amp;</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="203" href="#203" data-line-number="203">              <span class="co">-- Correct empty line height</span></a>
+<a class="sourceLine" id="204" href="#204" data-line-number="204">              C.height <span class="fu">.</span> C.em <span class="fu">$</span> <span class="fl">1.2</span></a>
+<a class="sourceLine" id="205" href="#205" data-line-number="205">              C.position C.absolute</a>
+<a class="sourceLine" id="206" href="#206" data-line-number="206"></a>
+<a class="sourceLine" id="207" href="#207" data-line-number="207">          C.star <span class="fu">C.#</span> sourceCode <span class="fu">C.?</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="208" href="#208" data-line-number="208">            <span class="co">-- Needed for line numbers to be displayed</span></a>
+<a class="sourceLine" id="209" href="#209" data-line-number="209">            C.overflow C.visible</a>
+<a class="sourceLine" id="210" href="#210" data-line-number="210"></a>
+<a class="sourceLine" id="211" href="#211" data-line-number="211">          <span class="co">-- Collapse neighbours correctly</span></a>
+<a class="sourceLine" id="212" href="#212" data-line-number="212">          C.div <span class="fu">C.#</span> sourceCode <span class="fu">C.?</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="213" href="#213" data-line-number="213">            C.sym2 C.margin (C.em <span class="dv">1</span>) C.nil</a>
+<a class="sourceLine" id="214" href="#214" data-line-number="214">          C.pre <span class="fu">C.#</span> sourceCode <span class="fu">C.?</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="215" href="#215" data-line-number="215">            C.sym C.margin C.nil</a>
+<a class="sourceLine" id="216" href="#216" data-line-number="216"></a>
+<a class="sourceLine" id="217" href="#217" data-line-number="217">          C.code <span class="fu">C.#</span> sourceCode <span class="fu">C.?</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="218" href="#218" data-line-number="218">            C.whiteSpace CT.pre</a>
+<a class="sourceLine" id="219" href="#219" data-line-number="219">            <span class="co">-- Needed for contents to be position: absolute</span></a>
+<a class="sourceLine" id="220" href="#220" data-line-number="220">            C.position C.relative</a>
+<a class="sourceLine" id="221" href="#221" data-line-number="221"></a>
+<a class="sourceLine" id="222" href="#222" data-line-number="222">          C.query CM.screen [] <span class="fu">$</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="223" href="#223" data-line-number="223">            C.div <span class="fu">C.#</span> sourceCode <span class="fu">C.?</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="224" href="#224" data-line-number="224">              C.overflowX C.auto</a>
+<a class="sourceLine" id="225" href="#225" data-line-number="225"></a>
+<a class="sourceLine" id="226" href="#226" data-line-number="226">          C.query CM.print [] <span class="fu">$</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="227" href="#227" data-line-number="227">            C.code <span class="fu">C.#</span> sourceCode <span class="fu">C.?</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="228" href="#228" data-line-number="228">              C.whiteSpace C.preWrap</a>
+<a class="sourceLine" id="229" href="#229" data-line-number="229">            C.a <span class="fu">C.#</span> sourceLine <span class="fu">C.?</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="230" href="#230" data-line-number="230">              C.textIndent <span class="fu">.</span> C.indent <span class="fu">.</span> C.em <span class="fu">$</span> (<span class="fu">-</span><span class="dv">1</span>)</a>
+<a class="sourceLine" id="231" href="#231" data-line-number="231">              C.paddingLeft <span class="fu">.</span> C.em <span class="fu">$</span> <span class="dv">1</span></a>
+<a class="sourceLine" id="232" href="#232" data-line-number="232"></a>
+<a class="sourceLine" id="233" href="#233" data-line-number="233">         linkspec <span class="fu">=</span> C.query CM.screen [] <span class="fu">$</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="234" href="#234" data-line-number="234">          C.a <span class="fu">C.#</span> sourceLine <span class="fu">C.#</span> C.before <span class="fu">C.?</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="235" href="#235" data-line-number="235">            C.textDecoration C.underline</a>
+<a class="sourceLine" id="236" href="#236" data-line-number="236"></a>
+<a class="sourceLine" id="237" href="#237" data-line-number="237"><span class="ot">         numberSource ::</span> <span class="dt">C.Refinement</span></a>
+<a class="sourceLine" id="238" href="#238" data-line-number="238">         numberSource <span class="fu">=</span> fromString <span class="st">&quot;.numberSource&quot;</span></a>
+<a class="sourceLine" id="239" href="#239" data-line-number="239"><span class="ot">         sourceCode ::</span> <span class="dt">C.Refinement</span></a>
+<a class="sourceLine" id="240" href="#240" data-line-number="240">         sourceCode <span class="fu">=</span> fromString <span class="st">&quot;.sourceCode&quot;</span></a>
+<a class="sourceLine" id="241" href="#241" data-line-number="241"><span class="ot">         sourceLine ::</span> <span class="dt">C.Refinement</span></a>
+<a class="sourceLine" id="242" href="#242" data-line-number="242">         sourceLine <span class="fu">=</span> fromString <span class="st">&quot;.sourceLine&quot;</span></a>
+<a class="sourceLine" id="243" href="#243" data-line-number="243"></a>
+<a class="sourceLine" id="244" href="#244" data-line-number="244"><span class="ot">toCss ::</span> (<span class="dt">TokenType</span>, <span class="dt">TokenStyle</span>) <span class="ot">-&gt;</span> <span class="dt">Css</span></a>
+<a class="sourceLine" id="245" href="#245" data-line-number="245">toCss (t,tf) <span class="fu">=</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="246" href="#246" data-line-number="246">        C.code <span class="fu">C.**</span> C.span <span class="fu">C.#</span> shortR t <span class="fu">C.?</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="247" href="#247" data-line-number="247">            colorspec</a>
+<a class="sourceLine" id="248" href="#248" data-line-number="248">            backgroundspec</a>
+<a class="sourceLine" id="249" href="#249" data-line-number="249">            weightspec</a>
+<a class="sourceLine" id="250" href="#250" data-line-number="250">            stylespec</a>
+<a class="sourceLine" id="251" href="#251" data-line-number="251">            decorationspec</a>
+<a class="sourceLine" id="252" href="#252" data-line-number="252">            <span class="co">-- C.comment $ showTokenType t</span></a>
+<a class="sourceLine" id="253" href="#253" data-line-number="253">  <span class="kw">where</span> colorspec <span class="fu">=</span> pure () <span class="ot">`maybe`</span> (\col <span class="ot">-&gt;</span> C.color <span class="fu">$</span> fromColor col) <span class="fu">$</span> tokenColor tf</a>
+<a class="sourceLine" id="254" href="#254" data-line-number="254">        backgroundspec <span class="fu">=</span> pure () <span class="ot">`maybe`</span> (\col <span class="ot">-&gt;</span> C.backgroundColor <span class="fu">$</span> fromColor col) <span class="fu">$</span> tokenBackground tf</a>
+<a class="sourceLine" id="255" href="#255" data-line-number="255">        weightspec <span class="fu">=</span> <span class="kw">if</span> tokenBold tf <span class="kw">then</span> C.fontWeight C.bold <span class="kw">else</span> pure ()</a>
+<a class="sourceLine" id="256" href="#256" data-line-number="256">        stylespec  <span class="fu">=</span> <span class="kw">if</span> tokenItalic tf <span class="kw">then</span> C.fontStyle C.italic <span class="kw">else</span> pure ()</a>
+<a class="sourceLine" id="257" href="#257" data-line-number="257">        decorationspec <span class="fu">=</span> <span class="kw">if</span> tokenUnderline tf <span class="kw">then</span> C.textDecoration C.underline <span class="kw">else</span> pure ()</a>
+<a class="sourceLine" id="258" href="#258" data-line-number="258">        shortR <span class="fu">=</span> C.byClass <span class="fu">.</span> Text.pack <span class="fu">.</span> short</a>
+<a class="sourceLine" id="259" href="#259" data-line-number="259">        <span class="co">-- showTokenType t&#39; = case reverse (show t&#39;) of</span></a>
+<a class="sourceLine" id="260" href="#260" data-line-number="260">        <span class="co">--                      &#39;k&#39;:&#39;o&#39;:&#39;T&#39;:xs -&gt; reverse xs</span></a>
+<a class="sourceLine" id="261" href="#261" data-line-number="261">        <span class="co">--                      _              -&gt; &quot;&quot;</span></a>
+<a class="sourceLine" id="262" href="#262" data-line-number="262"></a></code></pre></div></body></html>
